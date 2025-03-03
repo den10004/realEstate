@@ -24,16 +24,8 @@ header {
 
 .header__container>button {
     font-size: 16px;
-    box-shadow: 0 0 14px var(--color-blue-f3), inset 0 0 0 var(--color-blue-a3);
-    background-color: var(--color-blue-f9);
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 3px solid #2f69c1;
-    color: var(--color-white);
-    font-weight: 600;
     padding: 20px 43px 20px 43px;
-    border-radius: 8px;
+
 }
 
 header>div>h1 {

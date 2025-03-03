@@ -2,12 +2,17 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Недвижимость</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="robots" content="" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
@@ -15,12 +20,106 @@
       <div class="layout">
         <div class="header__container">
           <a class="logo" href="/"><span>Plat</span>forma</a>
-          <button>Разместить объект</button>
+          <button class="blue-btn">Разместить объект</button>
         </div>
 
         <h1>Курортная недвижимость</h1>
         <p>для жилья, отдыха и инвестиций</p>
       </div>
     </header>
+
+    <section class="cards">
+      <div class="layout">
+        <div class="card">
+          <div class="div1">
+            <h3>The Riviera Santa Monica</h3>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="https://avatars.mds.yandex.net/i?id=109b0ec0b5240e16660fe0202b3dab43386dd92c-8451085-images-thumbs&n=13"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://avatars.mds.yandex.net/i?id=109b0ec0b5240e16660fe0202b3dab43386dd92c-8451085-images-thumbs&n=13"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://avatars.mds.yandex.net/i?id=109b0ec0b5240e16660fe0202b3dab43386dd92c-8451085-images-thumbs&n=13"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://avatars.mds.yandex.net/i?id=109b0ec0b5240e16660fe0202b3dab43386dd92c-8451085-images-thumbs&n=13"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="div2 font-p">
+            <p>Локация: <span>Тайланд, Паттайя, Джомтьен Бич</span></p>
+            <p>Площадь: <span>29 м²-325 м²</span></p>
+            <p>Цена: <span>6 000 000 рублей</span></p>
+            <p>Срок сдачи: <span>2025-2028</span></p>
+            <p>До моря: <span>1 км</span></p>
+            <p>Застройщик: <span>Riviera Group</span></p>
+          </div>
+          <div class="div3">
+            <div class="font-p" id="block1">
+              The Riviera Santa Monica – это современный кондоминиум, где
+              комфорт сочетается с приватностью и удобством. Комплекс расположен
+              так, чтобы создать тихую атмосферу вдали от городской суеты, а из
+              окон открываются виды на море, которые приятно радуют глаз.
+              Удобное расположение: всего в нескольких минутах езды до пляжа,
+              ключевых объектов инфраструктуры и рядом с основными дорожными
+              развязками. Комплекс идеально подходит как для комфортной жизни,
+              так и для инвестиций — сдачи в аренду или перепродажи
+            </div>
+            <button onclick="toggleBlock('block1')" class="font-p">
+              Подробнее
+            </button>
+          </div>
+          <div class="div4">
+            <div class="card__bottom font-p">
+              <div>Варианты оплаты: <br /><span>рассрочка</span></div>
+              <div>Выгода от перепродажи:<br /><span>24%</span></div>
+              <div>Доходность в год (руб.):<br /><span>>485 520</span></div>
+            </div>
+
+            <button class="blue-btn">Получить презентацию</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
+
+  <script>
+    function toggleBlock(blockId) {
+      const block = document.getElementById(blockId);
+
+      if (block.classList.contains("show")) {
+        block.classList.remove("show");
+        block.nextElementSibling.innerHTML = `Подробнее <span></span>`;
+      } else {
+        block.classList.add("show");
+        block.nextElementSibling.innerHTML = `Свернуть <span></span>`;
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="./js/slider.js"></script>
+  <script type="module" src="./js/telMask.js"></script>
+  <!--
+  <script type="module" src="./js/metrika.js"></script>-->
+  <noscript>
+    <div>
+      <img
+        src="https://mc.yandex.ru/watch/99870093"
+        style="position: absolute; left: -9999px"
+        alt=""
+      />
+    </div>
+  </noscript>
 </html>
