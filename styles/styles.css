@@ -1,0 +1,52 @@
+@import "./header.css";
+@import "./normalize.css";
+@import "../vendor/fonts.css";
+
+
+:root {
+  --color-white: #ffffff;
+  --color-blue: #2c9aff;
+  --color-blue-f3: #2196f3;
+  --color-blue-a3: #1b51a3;
+  --color-blue-f9: #5b9cf9;
+
+}
+
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1920px;
+  background: var(--color-white);
+  font-family: "Gilroy", "sans-serif";
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.layout {
+  max-width: 1570px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1400px) {
+  .layout {
+    max-width: 1180px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .layout {
+    max-width: 100%;
+  }
+}
