@@ -1,8 +1,17 @@
 .cards {
     background: var(--color-bg-cards);
-    position: relative;
+    padding-bottom: 50px;
 }
 
+.block1 {
+    height: 10px;
+}
+
+.card-position {
+    position: relative;
+    z-index: 2;
+    margin-top: -105px;
+}
 
 
 .card {
@@ -14,6 +23,10 @@
     background: var(--color-white);
     border-radius: 15px;
     padding: 40px;
+}
+
+.cards>.layout>.card:not(:last-child) {
+    margin-bottom: 40px;
 }
 
 .div1 {
