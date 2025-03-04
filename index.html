@@ -20,7 +20,14 @@
       <div class="layout">
         <div class="header__container">
           <a class="logo" href="/"><span>Plat</span>forma</a>
-          <button class="blue-btn header-footer-btn">Разместить объект</button>
+          <button
+            class="blue-btn header-footer-btn cosulationOpenModal"
+            data-title="Заполните форму и отправьте заявку"
+            data-btn="Получить презентацию"
+            data-sub="Получить презентацию"
+          >
+            Разместить объект
+          </button>
         </div>
 
         <h1>Курортная недвижимость</h1>
@@ -205,7 +212,12 @@
           </p>
 
           <div class="footer__medium-mobile">
-            <button class="blue-btn header-footer-btn">
+            <button
+              class="blue-btn header-footer-btn cosulationOpenModal"
+              data-title="Заполните форму и отправьте заявку"
+              data-btn="Получить презентацию"
+              data-sub="Получить презентацию"
+            >
               Разместить объект
             </button>
             <a class="footer-polytic" href="/privacy.html"
@@ -217,7 +229,12 @@
           <div class="footer__tel footer__tel-max">
             <a href="tel:88000000000">8 (800) 000-00-00</a>
             <div>Бесплатно по России</div>
-            <button class="blue-btn header-footer-btn">
+            <button
+              class="blue-btn header-footer-btn cosulationOpenModal"
+              data-title="Заполните форму и отправьте заявку"
+              data-btn="Получить презентацию"
+              data-sub="Получить презентацию"
+            >
               Разместить объект
             </button>
           </div>
@@ -228,14 +245,75 @@
           <a class="footer-polytic" href="/privacy.html"
             >Политика конфиденциальности</a
           >
-          <button class="blue-btn header-footer-btn footer-btn-min">
+          <button
+            class="blue-btn header-footer-btn footer-btn-min cosulationOpenModal"
+            data-title="Заполните форму и отправьте заявку"
+            data-btn="Получить презентацию"
+            data-sub="Получить презентацию"
+          >
             Разместить объект
           </button>
         </div>
       </div>
     </footer>
   </body>
+  <div class="popup-consultation darkening popup">
+    <div class="window">
+      <h2 class="popup-headline">
+        <span class="modal-title"> <div></div></span>
+      </h2>
 
+      <form class="from__modal" id="consultForm">
+        <input type="hidden" id="titleHiddenMail" name="title" value="*" />
+        <input
+          type="hidden"
+          id="titleHiddenData"
+          name="title-mail"
+          value="Заявка на консультацию"
+        />
+        <input
+          placeholder="Ваше имя"
+          type="text"
+          id="name"
+          name="name"
+          required
+          minlength="3"
+        />
+
+        <input
+          placeholder="Номер телефона"
+          type="tel"
+          id="tel"
+          name="tel"
+          required
+        />
+
+        <input
+          placeholder="Ваш e-mail"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+
+        <button type="submit" class="blue-btn" id="send-btn">
+          <span class="btn-mark"></span>
+        </button>
+
+        <div class="accept">
+          <span
+            >Нажимая кнопку "Получить консультацию", я подтверждаю, что
+            ознакомлен и согласен с условиями 
+            <a href="/privacy.html" target="_blank"
+              >политики &nbsp; обработки  персональных данных</a
+            ></span
+          >
+        </div>
+      </form>
+
+      <button class="closeConsultation closeAllModal">+</button>
+    </div>
+  </div>
   <script>
     function toggleBlock(blockId) {
       const block = document.getElementById(blockId);
@@ -250,8 +328,10 @@
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="./js/main.js"></script>
   <script type="module" src="./js/slider.js"></script>
   <script type="module" src="./js/telMask.js"></script>
+
   <!--
   <script type="module" src="./js/metrika.js"></script>-->
   <noscript>
