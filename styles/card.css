@@ -1,6 +1,8 @@
 .cards {
     background: var(--color-bg-cards);
+    position: relative;
 }
+
 
 
 .card {
@@ -34,6 +36,7 @@
     grid-area: 1 / 2 / 2 / 3;
     border-bottom: 1px solid var(--color-bg-cards);
     padding-bottom: 30px;
+    margin-top: 80px;
 }
 
 .div2>p {
@@ -125,6 +128,33 @@
     object-fit: contain;
 }
 
+.realStatePagination .swiper-pagination-bullet {
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+}
+
+
+.realStatePagination .swiper-pagination-bullet-active {
+    background: var(--color-blue-f9);
+}
+
+.swiper-pagination-bullet {
+    background: #ede5e5;
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 60px);
+}
 
 @media screen and (max-width: 1400px) {
     .div1>h3 {
@@ -143,6 +173,13 @@
         height: 50px;
         padding: 0 17px 0 17px;
     }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: var(--swiper-pagination-bottom, 30px);
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -154,19 +191,23 @@
         padding: 0 15px 0 15px;
     }
 
+    .div2 {
+        padding-bottom: 10px;
+    }
+
+    .div3 {
+        padding-top: 10px;
+    }
+
     .div3>button {
         margin-top: 20px;
     }
-
 }
 
 @media screen and (max-width: 800px) {
     .card {
-        display: grid;
         grid-template-columns: 63% 33%;
         /*    grid-template-rows: repeat(3, 1fr);*/
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
         padding: 20px;
         grid-column-gap: 27px;
     }
@@ -217,33 +258,44 @@
     .card__bottom>div:last-child {
         padding-top: 15px;
     }
+
+    .realStatePagination .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: var(--swiper-pagination-bottom, 20px);
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .div1>h3 {
-        font-size: 22px;
-    }
 
     .card {
-        display: grid;
-        grid-template-columns: 1fr;
-        /*   grid-template-rows: repeat(4, 1fr);*/
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
     }
 
-    .div1 {
-        grid-area: 1 / 1 / 2 / 2;
+    .div1>h3 {
+        font-size: 22px;
+        padding: 20px 20px 0 20px;
+    }
+
+    .div1>div {
+        margin-top: 20px;
     }
 
     .div2 {
-        grid-area: 2 / 1 / 3 / 2;
-        padding-bottom: 20px;
+        margin-top: 20px;
+        padding: 0 20px 20px 20px;
     }
 
     .div3 {
-        grid-area: 3 / 1 / 4 / 2;
-        padding-top: 20px;
+        padding: 20px 20px 0 20px;
     }
 
     .div3>button {
@@ -251,8 +303,9 @@
     }
 
     .div4 {
-        grid-area: 4 / 1 / 5 / 2;
         margin-top: 20px;
+        padding: 0 20px 20px 20px;
+        box-sizing: border-box;
     }
 
     .div4>button {
