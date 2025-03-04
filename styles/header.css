@@ -11,22 +11,22 @@ header {
 }
 
 
-.header__container>.logo {
+
+.logo {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--color-white);
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 700;
-    font-size: 38px;
-    color: var(--color-white);
 }
 
-.header__container>a>span {
+.logo>span {
     color: var(--color-blue);
 }
 
-.header__container>button {
-    font-size: 16px;
+.header-footer-btn {
     padding: 20px 43px 20px 43px;
-
+    font-size: 16px;
 }
 
 header>div>h1 {
@@ -68,11 +68,14 @@ header>div>p {
     }
 
     .header__container>.logo {
-        font-size: 29px;
         margin-top: 10px;
     }
 
-    .header__container>button {
+    .logo {
+        font-size: 29px;
+    }
+
+    .header-footer-btn {
         padding: 15px 43px 15px 43px;
         font-size: 14px;
     }
@@ -89,9 +92,12 @@ header>div>p {
     }
 
     .header__container>.logo {
-        font-size: 23px;
         margin-top: 2px;
         margin-left: 32px;
+    }
+
+    .logo {
+        font-size: 23px;
     }
 
     header>div>h1 {
@@ -114,9 +120,12 @@ header>div>p {
     }
 
     .header__container>.logo {
-        font-size: 21px;
         margin-left: 0;
         margin-top: 7px;
+    }
+
+    .logo {
+        font-size: 21px;
     }
 
     header>div>h1 {
@@ -131,7 +140,7 @@ header>div>p {
         text-align: left;
     }
 
-    .header__container>button {
+    .header-footer-btn {
         padding: 12px 20px 12px 20px;
         font-size: 12px;
     }
