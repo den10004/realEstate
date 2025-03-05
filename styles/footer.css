@@ -69,7 +69,7 @@ footer {
 }
 
 
-.layout-footer {
+footer>.layout {
     max-width: 1570px;
     padding: 0 20px;
     box-sizing: border-box;
@@ -81,7 +81,7 @@ footer {
         max-width: 660px;
     }
 
-    .layout-footer {
+    footer>.layout {
         max-width: 1180px;
     }
 }
@@ -103,7 +103,7 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-    .layout-footer {
+    footer>.layout {
         max-width: 100%;
         padding: 0;
     }

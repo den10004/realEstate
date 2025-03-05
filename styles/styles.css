@@ -47,6 +47,13 @@ a {
   margin: 0 auto;
 }
 
+.layout-card {
+  max-width: 1570px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 .font-p {
   font-size: 20px;
   line-height: 1.5;
@@ -74,6 +81,11 @@ button {
     max-width: 1180px;
   }
 
+  .layout-card {
+    max-width: 1180px;
+  }
+
+
   .font-p {
     font-size: 16px;
   }
@@ -83,6 +95,11 @@ button {
 @media screen and (max-width: 800px) {
   .layout {
     max-width: 100%;
+  }
+
+  .layout-card {
+    max-width: 100%;
+    padding: 0;
   }
 
   .font-p {
