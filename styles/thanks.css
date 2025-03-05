@@ -53,6 +53,7 @@
 
     .thanks {
         margin-top: 53px;
+        margin-left: 35px;
     }
 
     .thanks>h2 {
@@ -78,6 +79,13 @@
     }
 
 }
+
+@media screen and (max-width: 650px) {
+    .thanks {
+        margin-left: 0px;
+    }
+}
+
 
 @media screen and (max-width: 500px) {
     .header__thanks {

@@ -115,7 +115,7 @@ footer>.layout {
     .footer__top>p {
         max-width: 100%;
         margin-top: 25px;
-        padding: 0 20px;
+        padding: 0 55px;
     }
 
     .footer__tel-min {
@@ -127,7 +127,7 @@ footer>.layout {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding: 0 20px;
+        padding: 0 55px;
         box-sizing: border-box;
     }
 
@@ -150,7 +150,7 @@ footer>.layout {
 
     .footer__bottom {
         align-items: flex-end;
-        padding: 20px 20px;
+        padding: 20px 55px;
         box-sizing: border-box;
     }
 
@@ -163,6 +163,18 @@ footer>.layout {
     footer {
         background: var(--color-footer);
         padding: 30px 0 20px 0;
+    }
+
+    .footer__top-block {
+        padding: 0 20px;
+    }
+
+    .footer__top>p {
+        padding: 0 20px;
+    }
+
+    .footer__bottom {
+        padding: 20px;
     }
 
     .footer__medium-mobile {
