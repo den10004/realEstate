@@ -17,7 +17,7 @@
 .card {
     display: grid;
     grid-template-columns: 60% 37%;
-    grid-template-rows: 240px 1fr 0.5fr;
+    grid-template-rows: 265px 1fr 0.5fr;
     grid-column-gap: 40px;
     grid-row-gap: 0px;
     background: var(--color-white);
@@ -177,7 +177,7 @@
 
     .card {
         grid-template-columns: 59.5% 36.5%;
-        grid-template-rows: 200px 1fr 0.5fr;
+        grid-template-rows: 220px 1fr 0.5fr;
     }
 
     .div1>h3 {
@@ -214,13 +214,22 @@
 
 @media screen and (max-width: 1300px) {
     .card {
+        grid-template-rows: 228px 1fr 0.5fr;
+        grid-template-columns: 59.5% 38.5%;
         grid-column-gap: 20px;
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .card {
+        grid-template-rows: 235px 1fr 0.5fr;
+    }
+}
+
+
 @media screen and (max-width: 1100px) {
     .card {
-        grid-template-rows: 200px 210px 0.5fr;
+        grid-template-rows: 255px 210px 0.5fr;
     }
 }
 
@@ -257,7 +266,7 @@
 @media screen and (max-width: 1000px) {
     .card {
         grid-template-columns: 65% 31.6%;
-        grid-template-rows: 220px 172px 233px;
+        grid-template-rows: 246px 172px 256px;
         padding: 20px;
         grid-column-gap: 27px;
     }
@@ -325,7 +334,7 @@
 
 @media screen and (max-width: 900px) {
     .card {
-        grid-template-rows: 220px 130px 233px;
+        grid-template-rows: 259px 130px 256px;
     }
 }
 
@@ -336,7 +345,7 @@
     }
 
     .card {
-        grid-template-rows: 220px 112px 213px;
+        grid-template-rows: 256px 112px 240px;
     }
 }
 
