@@ -46,6 +46,12 @@ li {
   list-style-type: none
 }
 
+
+.logo>img {
+  width: 230px;
+}
+
+
 .layout {
   max-width: 1570px;
   padding: 0 20px;
@@ -96,6 +102,9 @@ button {
     font-size: 16px;
   }
 
+  .logo>img {
+    width: 180px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -110,5 +119,15 @@ button {
 
   .font-p {
     font-size: 14px;
+  }
+
+  .logo>img {
+    width: 145px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .logo>img {
+    width: 130px;
   }
 }

@@ -87,10 +87,6 @@ footer>.layout {
 }
 
 @media screen and (max-width: 1300px) {
-    .footer__top>.logo {
-        font-size: 30px;
-    }
-
     .footer__top>p {
         max-width: 500px;
     }
@@ -200,4 +196,10 @@ footer>.layout {
         font-size: 16px;
     }
 
+}
+
+@media screen and (max-width: 335px) {
+    .footer-polytic {
+        font-size: 12px;
+    }
 }
