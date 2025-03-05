@@ -2,6 +2,7 @@
 @import "./card.css";
 @import "./footer.css";
 @import "./thanks.css";
+@import "./privacy.css";
 @import "./modal.css";
 @import "./normalize.css";
 @import "../vendor/fonts.css";
@@ -39,6 +40,10 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+}
+
+li {
+  list-style-type: none
 }
 
 .layout {
