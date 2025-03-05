@@ -103,6 +103,7 @@
     color: var(--color-text);
     line-height: 1.267;
     width: 270px;
+    font-weight: 500;
 }
 
 .from__modal {
@@ -140,4 +141,33 @@ input {
 .accept>span>a {
     color: var(--color-blue);
     text-decoration: underline;
+}
+
+
+@media screen and (max-width: 550px) {
+    .popup-headline {
+        font-size: 20px;
+        width: 270px;
+    }
+
+    .window {
+        max-width: calc(100% - 40px);
+        overflow-y: scroll;
+        padding: 30px 20px 30px 20px;
+    }
+
+    .from__modal {
+        margin-top: 25px;
+    }
+
+    .from__modal>button {
+        height: 70px;
+        width: 100%;
+        margin: 25px 0 20px 0;
+    }
+
+    input {
+        height: 50px;
+        padding-left: 20px;
+    }
 }

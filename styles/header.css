@@ -1,4 +1,4 @@
-header {
+.header {
     background: var(--color-blue-f3) url(./../images/header-bg.webp) center;
     height: 664px;
 }
@@ -29,7 +29,7 @@ header {
     font-size: 16px;
 }
 
-header>div>h1 {
+.header>div>h1 {
     font-size: 90px;
     color: var(--color-white);
     font-weight: bold;
@@ -40,7 +40,7 @@ header>div>h1 {
 }
 
 
-header>div>p {
+.header>div>p {
     font-size: 40px;
     color: var(--color-white);
     font-weight: bold;
@@ -49,17 +49,17 @@ header>div>p {
 }
 
 @media screen and (max-width: 1400px) {
-    header {
+    .header {
         height: 582px;
     }
 
-    header>div>h1 {
+    .header>div>h1 {
         font-size: 72px;
         margin-top: 81px;
         margin-bottom: 5px;
     }
 
-    header>div>p {
+    .header>div>p {
         font-size: 24px;
     }
 
@@ -86,7 +86,7 @@ header>div>p {
         padding-top: 25px;
     }
 
-    header {
+    .header {
         background: var(--color-blue-f3) url(./../images/header-bg-min.webp) center;
         height: 531px;
     }
@@ -100,7 +100,7 @@ header>div>p {
         font-size: 23px;
     }
 
-    header>div>h1 {
+    .header>div>h1 {
         font-size: 60px;
         margin-top: 58px;
         max-width: 500px;
@@ -108,7 +108,7 @@ header>div>p {
         line-height: 1.1;
     }
 
-    header>div>p {
+    .header>div>p {
         margin-top: 30px;
     }
 }
@@ -128,14 +128,14 @@ header>div>p {
         font-size: 21px;
     }
 
-    header>div>h1 {
+    .header>div>h1 {
         font-size: 32px;
         max-width: 300px;
         text-align: left;
         margin-left: 0;
     }
 
-    header>div>p {
+    .header>div>p {
         font-size: 18px;
         text-align: left;
     }

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="layout">
         <div class="header__container">
           <a class="logo" href="/"><span>Plat</span>forma</a>
@@ -110,7 +110,14 @@
               <div>Доходность в год (руб.):<br /><span>>485 520</span></div>
             </div>
 
-            <button class="blue-btn">Получить презентацию</button>
+            <button
+              class="blue-btn cosulationOpenModal"
+              data-title="Заполните форму и отправьте заявку на The Riviera Santa Monica"
+              data-btn="Получить презентацию"
+              data-sub="Получить презентацию на The Riviera Santa Monica"
+            >
+              Получить презентацию
+            </button>
           </div>
         </div>
       </div>
@@ -241,6 +248,7 @@
     </div>
   </div>
   <script>
+    /*
     function toggleBlock(blockId) {
       const block = document.getElementById(blockId);
 
@@ -251,7 +259,7 @@
         block.classList.add("show");
         block.nextElementSibling.innerHTML = `Свернуть <span></span>`;
       }
-    }
+    }*/
   </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="module" src="./js/main.js"></script>
