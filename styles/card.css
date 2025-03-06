@@ -23,6 +23,7 @@
     background: var(--color-white);
     border-radius: 15px;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .cards>.layout-card>.card:not(:last-child) {

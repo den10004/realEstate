@@ -64,6 +64,15 @@
     }
 }
 
+
+@media screen and (max-width: 1300px) {
+    .header>div>h1 {
+        font-size: 50px;
+        margin-top: 70px;
+        margin-bottom: 5px;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .header__container {
         padding-top: 25px;
@@ -80,7 +89,7 @@
     }
 
     .header>div>h1 {
-        font-size: 60px;
+        font-size: 45px;
         margin-top: 58px;
         max-width: 500px;
         margin: 58px auto 0 auto;
@@ -89,6 +98,12 @@
 
     .header>div>p {
         margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header>div>h1 {
+        font-size: 32px;
     }
 }
 
