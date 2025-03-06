@@ -7,7 +7,7 @@
 .header__container {
     display: flex;
     justify-content: space-between;
-    padding-top: 67px;
+    padding-top: 50px;
 }
 
 
@@ -48,10 +48,6 @@
 
     .header>div>p {
         font-size: 24px;
-    }
-
-    .header__container {
-        padding-top: 50px;
     }
 
     .header__container>.logo {
@@ -103,7 +99,14 @@
 
 @media screen and (max-width: 500px) {
     .header>div>h1 {
-        font-size: 32px;
+        font-size: 30px;
+        max-width: 350px;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .header>div>p {
+        text-align: left;
     }
 }
 
@@ -118,12 +121,7 @@
         margin-top: 7px;
     }
 
-    .header>div>h1 {
-        font-size: 32px;
-        max-width: 300px;
-        text-align: left;
-        margin-left: 0;
-    }
+
 
     .header>div>p {
         font-size: 18px;
