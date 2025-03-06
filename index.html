@@ -214,7 +214,11 @@
             <p>Застройщик: <span>Неометрия</span></p>
             <p>
               Проектная декларация:
-              <span><a href="https://наш.дом.рф/">наш.дом.рф</a></span>
+              <span
+                ><a target="_blank" href="https://наш.дом.рф/"
+                  >наш.дом.рф</a
+                ></span
+              >
             </p>
           </div>
           <div class="div3">
@@ -319,7 +323,11 @@
             <p>Застройщик: <span>ООО «СочиОйлСтрой»</span></p>
             <p>
               Проектная декларация:
-              <span><a href="https://наш.дом.рф/">наш.дом.рф</a></span>
+              <span
+                ><a target="_blank" href="https://наш.дом.рф/"
+                  >наш.дом.рф</a
+                ></span
+              >
             </p>
           </div>
           <div class="div3">
@@ -543,7 +551,11 @@
             <p>Застройщик: <span>ООО «Еврострой» </span></p>
             <p>
               Проектная декларация:
-              <span><a href="https://наш.дом.рф/">наш.дом.рф</a></span>
+              <span
+                ><a target="_blank" href="https://наш.дом.рф/"
+                  >наш.дом.рф</a
+                ></span
+              >
             </p>
           </div>
           <div class="div3">
@@ -701,7 +713,11 @@
             <p>Застройщик: <span>Альпика Групп</span></p>
             <p>
               Проектная декларация:
-              <span><a href="https://наш.дом.рф/">наш.дом.рф</a></span>
+              <span
+                ><a target="_blank" href="https://наш.дом.рф/"
+                  >наш.дом.рф</a
+                ></span
+              >
             </p>
           </div>
           <div class="div3">
@@ -1105,7 +1121,11 @@
             <p>Застройщик: <span>ИСК "Еврострой"</span></p>
             <p>
               Проектная декларация:
-              <span><a href="https://наш.дом.рф/">наш.дом.рф</a></span>
+              <span
+                ><a target="_blank" href="https://наш.дом.рф/"
+                  >наш.дом.рф</a
+                ></span
+              >
             </p>
           </div>
           <div class="div3">
@@ -3229,3 +3249,30 @@
     </div>
   </noscript>
 </html>
+
+<script>
+  let observedElements = document.querySelectorAll(".card");
+  const options = {
+    //define your options
+    threshold: 0.1,
+  };
+
+  const inViewCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("inview");
+      }
+    });
+  };
+  let observer = new IntersectionObserver(inViewCallback, options);
+
+  observedElements.forEach((element) => {
+    observer.observe(element);
+  });
+</script>
+
+<style>
+  .inview {
+    opacity: 1;
+  }
+</style>
