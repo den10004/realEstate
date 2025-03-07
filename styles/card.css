@@ -44,11 +44,10 @@
     margin-top: 20px;
 }
 
-
 .div2 {
     grid-area: 1 / 2 / 2 / 3;
     border-bottom: 1px solid var(--color-bg-cards);
-    margin-top: 50px;
+    /*  margin-top: 50px;*/
     padding-bottom: 10px;
 }
 
@@ -69,7 +68,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 9;
     -webkit-box-orient: vertical;
 }
 
@@ -346,7 +345,7 @@
     }
 
     .div2 {
-        margin-top: 20px;
+        /*  margin-top: 20px;*/
         padding: 0 20px 20px 20px;
     }
 
