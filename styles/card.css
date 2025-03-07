@@ -68,7 +68,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 9;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
 }
 
@@ -84,7 +84,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 .div4>button {
@@ -192,10 +192,6 @@
         font-size: 30px;
     }
 
-    .div4 {
-        margin-top: 10px;
-    }
-
     .div4>button {
         height: 50px;
         padding: 0 28px 0 28px;
@@ -272,7 +268,7 @@
 
     .div4>button {
         padding: 0px 43px 0 43px;
-        margin-top: 30px;
+        margin-top: 20px;
         width: 100%;
     }
 
@@ -345,7 +341,7 @@
     }
 
     .div2 {
-        /*  margin-top: 20px;*/
+        margin-top: 20px;
         padding: 0 20px 20px 20px;
     }
 
@@ -358,7 +354,7 @@
     }
 
     .div4 {
-        margin-top: 20px;
+        margin-top: 10px;
         padding: 0 20px 20px 20px;
         box-sizing: border-box;
     }
