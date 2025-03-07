@@ -15,7 +15,6 @@
 
 .card {
     display: grid;
-    opacity: 0;
     grid-template-columns: 60% 37%;
     grid-column-gap: 40px;
     grid-row-gap: 0px;
@@ -385,4 +384,8 @@
     .div4>button {
         width: 100%
     }
+}
+
+.realState {
+    display: none;
 }
