@@ -11,6 +11,7 @@
     background: var(--color-footer) url(./../images/header-thanks.webp) center;
     background-repeat: no-repeat;
     height: 772px;
+    background-position: top;
     flex-grow: 1;
 }
 
