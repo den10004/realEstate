@@ -3730,6 +3730,7 @@
   <script type="module" src="./js/main.js"></script>
   <script type="module" src="./js/slider.js"></script>
   <script type="module" src="./js/telMask.js"></script>
+  <script type="module" src="./js/lazy.js"></script>
 
   <!--
   <script type="module" src="./js/metrika.js"></script>-->
@@ -3743,24 +3744,3 @@
     </div>
   </noscript>
 </html>
-
-<script>
-  let observedElements = document.querySelectorAll(".card");
-  const options = {
-    threshold: 0.1,
-  };
-
-  const inViewCallback = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        child = entry.target.querySelector(".realState");
-        child.style.display = "block";
-      }
-    });
-  };
-  let observer = new IntersectionObserver(inViewCallback, options);
-
-  observedElements.forEach((element) => {
-    observer.observe(element);
-  });
-</script>
