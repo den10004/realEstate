@@ -69,7 +69,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
 }
 
@@ -384,8 +384,4 @@
     .div4>button {
         width: 100%
     }
-}
-
-.realState {
-    display: none;
 }
