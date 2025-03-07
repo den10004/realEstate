@@ -1,7 +1,19 @@
-.header__thanks {
-    background: var(--color-blue-f3) url(./../images/header-thanks.webp) center;
-    height: 772px;
+.body-style {
+    margin: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+
+.header__thanks {
+    background: var(--color-footer) url(./../images/header-thanks.webp) center;
+    background-repeat: no-repeat;
+    height: 772px;
+    flex-grow: 1;
+}
+
 
 .thanks {
     margin-top: 90px;
@@ -47,7 +59,7 @@
 
 @media screen and (max-width: 800px) {
     .header__thanks {
-        background: var(--color-blue-f3) url(./../images/header-thanks-min.webp) center;
+        background: var(--color-footer) url(./../images/header-thanks-min.webp) center;
         height: 637px;
     }
 

@@ -1,6 +1,7 @@
 .header {
-    background: var(--color-blue-f3) url(./../images/header-bg.webp) center;
+    background: var(--color-footer) url(./../images/header-bg.webp) center;
     height: 664px;
+    background-repeat: no-repeat;
 }
 
 
