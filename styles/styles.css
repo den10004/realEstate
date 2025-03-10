@@ -73,6 +73,11 @@ li {
 button {
   border: none;
   background: none;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
 }
 
 .blue-btn {
