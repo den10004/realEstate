@@ -226,7 +226,6 @@ function sendForm(form) {
 
       closeAllModals();
       btn.disabled = false;
-      btn2.disabled = false;
       window.location.href = "/thanks.html";
     } catch (error) {
       console.error("Произошла ошибка при отправке формы.", error);
