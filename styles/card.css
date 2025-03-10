@@ -96,6 +96,8 @@
     padding: 0 58px 0 58px;
     align-self: flex-end;
     font-size: 19px;
+    display: flex;
+    align-items: center
 }
 
 
@@ -133,6 +135,18 @@
     display: none;
 }
 
+
+.icon-pdf {
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+
+.icon-pdf>img {
+    width: 35px;
+    margin-left: 10px;
+}
+
 .swiper {
     width: 100%;
 }
@@ -141,6 +155,8 @@
     background: #fff;
     display: flex;
 }
+
+
 
 .swiper-slide img {
     display: block;
@@ -199,7 +215,7 @@
     .div4>button {
         height: 50px;
         padding: 0 28px 0 28px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .card__bottom {
@@ -271,7 +287,7 @@
     }
 
     .div4>button {
-        padding: 0px 43px 0 43px;
+        padding: 0px 10px 0 10px;
         margin-top: 20px;
         width: 100%;
     }
