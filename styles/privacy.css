@@ -3,13 +3,17 @@
     height: 180px;
 }
 
+.bg-layout {
+    background-color: #f1f2f4;
+}
+
+
 .polytic {
-    margin-top: 150px;
-    margin-bottom: 30px;
+    padding: 150px 0 30px 0;
 }
 
 .polytic>h1 {
-    font-size: 60px;
+    font-size: 74px;
 }
 
 .polytic>h2 {
@@ -24,7 +28,7 @@
 
 @media screen and (max-width: 1024px) {
     .polytic {
-        margin-top: 50px;
+        padding: 50px 0 30px 0;
     }
 
     .polytic>h2 {
@@ -44,10 +48,6 @@
 
 
 @media screen and (max-width: 425px) {
-    .polytic {
-        margin-top: 50px;
-    }
-
     .polytic>h2 {
         margin: 40px 0 20px 0;
     }
