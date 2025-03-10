@@ -2,7 +2,7 @@ const popup = document.querySelectorAll(".popup");
 const closeAllModal = document.querySelectorAll(".closeAllModal");
 const openCompilationModal = document.querySelectorAll(".cosulationOpenModal");
 const popupConsultation = document.querySelector(".popup-consultation");
-const icon = document.querySelectorAll(".icon-pdf");
+const popupConsultation2 = document.querySelector(".popup-consultation2");
 
 const menuItems = document.getElementsByClassName("list__block");
 const emailBlock = document.getElementById("email-block");
@@ -24,27 +24,36 @@ closeAllModal.forEach((el) =>
   })
 );
 
-function openModalFunc(title, btn, sub) {
-  popupConsultation.style.display = "block";
+function openModalFunc(title, btn, sub, type) {
   const modalTitle = document.querySelector(".modal-title");
+  const modalTitle2 = document.querySelector(".modal-title2");
   const hiddenInputMail = document.getElementById("titleHiddenMail");
-  const hiddenInputMail2 = document.getElementById("titleHiddenMail2");
+  //const hiddenInputMail2 = document.getElementById("titleHiddenMail2");
   const btnMark = document.querySelector(".btn-mark");
-  hiddenInputMail.value = sub;
-
-  if (hiddenInputMail2) {
-    hiddenInputMail2.value = sub;
+  const btnMark2 = document.querySelector(".btn-mark2");
+  if (hiddenInputMail) {
+    hiddenInputMail.value = sub;
   }
-  modalTitle.textContent = `${title}`;
-  btnMark.textContent = btn;
+  //hiddenInputMail2.value = sub;
+  if (type == "present") {
+    popupConsultation2.style.display = "block";
+    modalTitle2.textContent = `${title}`;
+    btnMark2.textContent = btn;
+  }
+  if (type == "obg") {
+    popupConsultation.style.display = "block";
+    modalTitle.textContent = `${title}`;
+    btnMark.textContent = btn;
+  }
 }
 
 openCompilationModal.forEach((el) =>
   el.addEventListener("click", function (e) {
+    const type = e.target.dataset.type;
     const title = e.target.dataset.title || "и получите консультацию";
     const sub = e.target.dataset.sub || "Получить консультацию";
     const btn = e.target.dataset.btn || "Получить консультацию";
-    openModalFunc(title, btn, sub);
+    openModalFunc(title, btn, sub, type);
   })
 );
 
@@ -214,7 +223,11 @@ function sendForm(form) {
     }
   });
 }
-emailBlock.style.display = "none";
+
+if (emailBlock) {
+  emailBlock.style.display = "none";
+}
+
 let onClick = function (event) {
   event.preventDefault();
 
