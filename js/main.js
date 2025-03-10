@@ -42,6 +42,7 @@ function openModalFunc(title, btn, sub) {
 openCompilationModal.forEach((el) =>
   el.addEventListener("click", function (e) {
     console.log(e.target.dataset.id);
+    console.log(e.target);
     const title = e.target.dataset.title || "и получите консультацию";
     const sub = e.target.dataset.sub || "Получить консультацию";
     const btn = e.target.dataset.btn || "Получить консультацию";
