@@ -9,15 +9,32 @@
 
 
 .polytic {
-    padding: 150px 0 30px 0;
+    padding: 150px 0 100px 0;
 }
 
-.polytic>h1 {
+
+.page-title {
+    color: #0c0c0e;
+    margin: 0 0 38px;
+    padding-top: 75px;
+    border-color: #dedfe1;
+    font-weight: 500;
+    padding-bottom: 31px;
+    border-bottom: thin solid rgb(179 176 176 / 25%);
+}
+
+.page-title>h1 {
     font-size: 74px;
 }
 
-.polytic>h2 {
-    margin: 50px 0 30px 0;
+
+.polytic>a {
+    padding: 22px 89px 22px 89px;
+    font-size: 19px;
+}
+
+.polytic>ol {
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -28,11 +45,7 @@
 
 @media screen and (max-width: 1024px) {
     .polytic {
-        padding: 50px 0 30px 0;
-    }
-
-    .polytic>h2 {
-        margin: 40px 0 20px 0;
+        padding: 50px 0 100px 0;
     }
 }
 
@@ -41,18 +54,23 @@
         height: 100px;
     }
 
-    .polytic>h1 {
+    .page-title>h1 {
         font-size: 30px;
+    }
+
+    .page-title {
+        padding-top: 0px;
+    }
+
+    .polytic>a {
+        padding: 20px 42px 20px 42px;
+        font-size: 14px;
     }
 }
 
 
 @media screen and (max-width: 425px) {
-    .polytic>h2 {
-        margin: 40px 0 20px 0;
-    }
-
-    .polytic>h1 {
+    .page-title>h1 {
         font-size: 26px;
     }
 }
