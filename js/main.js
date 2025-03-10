@@ -28,22 +28,21 @@ function openModalFunc(title, btn, sub, type) {
   const modalTitle = document.querySelector(".modal-title");
   const modalTitle2 = document.querySelector(".modal-title2");
   const hiddenInputMail = document.getElementById("titleHiddenMail");
-  //const hiddenInputMail2 = document.getElementById("titleHiddenMail2");
+  const hiddenInputMail2 = document.getElementById("titleHiddenMail2");
   const btnMark = document.querySelector(".btn-mark");
   const btnMark2 = document.querySelector(".btn-mark2");
-  if (hiddenInputMail) {
-    hiddenInputMail.value = sub;
-  }
-  //hiddenInputMail2.value = sub;
+
   if (type == "present") {
     popupConsultation2.style.display = "block";
     modalTitle2.textContent = `${title}`;
     btnMark2.textContent = btn;
+    hiddenInputMail2.value = sub;
   }
   if (type == "obg") {
     popupConsultation.style.display = "block";
     modalTitle.textContent = `${title}`;
     btnMark.textContent = btn;
+    hiddenInputMail.value = sub;
   }
 }
 
@@ -56,6 +55,16 @@ openCompilationModal.forEach((el) =>
     openModalFunc(title, btn, sub, type);
   })
 );
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("consultForm");
+  sendForm(form);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("consultForm2");
+  sendForm(form);
+});
 
 function getUrlParameter(name) {
   name = name.replace(/[$$$$]/g, "\\$&");
@@ -196,7 +205,7 @@ function fd(formData) {
 function sendForm(form) {
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
-    const btn = event.srcElement.querySelector(".red-btn");
+    const btn = event.srcElement.querySelector("#send-btn");
     btn.disabled = true;
     btn.textContent = "Отправка...";
     try {
@@ -204,7 +213,8 @@ function sendForm(form) {
       let object = {};
 
       fd(formData);
-      const response = await fetch("https://audiics.ru/sendforms.php", {
+      console.log(formData);
+      const response = await fetch("https://proinvestresort.ru/sendforms.php", {
         method: "POST",
         body: formData,
       });
@@ -216,6 +226,7 @@ function sendForm(form) {
 
       closeAllModals();
       btn.disabled = false;
+      btn2.disabled = false;
       window.location.href = "/thanks.html";
     } catch (error) {
       console.error("Произошла ошибка при отправке формы.", error);

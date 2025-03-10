@@ -17,7 +17,7 @@
     a.parentNode.insertBefore(k, a);
 })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-ym(99641825, "init", {
+ym(100282784, "init", {
   clickmap: true,
   trackLinks: true,
   accurateTrackBounce: true,
