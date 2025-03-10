@@ -140,6 +140,7 @@
     align-items: center;
     display: flex;
     margin: auto;
+    pointer-events: none
 }
 
 .icon-pdf>img {

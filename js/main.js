@@ -2,6 +2,7 @@ const popup = document.querySelectorAll(".popup");
 const closeAllModal = document.querySelectorAll(".closeAllModal");
 const openCompilationModal = document.querySelectorAll(".cosulationOpenModal");
 const popupConsultation = document.querySelector(".popup-consultation");
+const icon = document.querySelectorAll(".icon-pdf");
 
 const menuItems = document.getElementsByClassName("list__block");
 const emailBlock = document.getElementById("email-block");
@@ -36,23 +37,16 @@ function openModalFunc(title, btn, sub) {
   }
   modalTitle.textContent = `${title}`;
   btnMark.textContent = btn;
-  const form = document.getElementById("consultForm");
 }
 
 openCompilationModal.forEach((el) =>
   el.addEventListener("click", function (e) {
-    console.log(e.target.dataset.id);
-    console.log(e.target);
     const title = e.target.dataset.title || "и получите консультацию";
     const sub = e.target.dataset.sub || "Получить консультацию";
     const btn = e.target.dataset.btn || "Получить консультацию";
     openModalFunc(title, btn, sub);
   })
 );
-
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("consultFormMain");
-});
 
 function getUrlParameter(name) {
   name = name.replace(/[$$$$]/g, "\\$&");
