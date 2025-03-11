@@ -3,6 +3,7 @@ const closeAllModal = document.querySelectorAll(".closeAllModal");
 const openCompilationModal = document.querySelectorAll(".cosulationOpenModal");
 const popupConsultation = document.querySelector(".popup-consultation");
 const popupConsultation2 = document.querySelector(".popup-consultation2");
+const popupAlert = document.querySelector(".popup-alert");
 
 const menuItems = document.getElementsByClassName("list__block");
 const emailBlock = document.getElementById("email-block");
@@ -58,12 +59,16 @@ openCompilationModal.forEach((el) =>
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("consultForm");
-  sendForm(form);
+  const thanks = "route";
+  const btnText = "Разместить объект";
+  sendForm(form, thanks, btnText);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("consultForm2");
-  sendForm(form);
+  const thanks = "alert";
+  const btnText = "Получить презентацию";
+  sendForm(form, thanks, btnText);
 });
 
 function getUrlParameter(name) {
@@ -199,10 +204,10 @@ function fd(formData) {
   formData.append("utm_position_type", getCookie("utm_position_type") || "");
   formData.append("utm_source_type", getCookie("utm_source_type") || "");
   formData.append("yclid", getCookie("yclid") || "");
-  formData.append("subject", "Заявка с сайта сабвуферы MK Sound");
+  formData.append("subject", "Письмо с сайта proinvestresort.ru");
 }
 
-function sendForm(form) {
+function sendForm(form, thanks, btnText) {
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
     const btn = event.srcElement.querySelector("#send-btn");
@@ -226,7 +231,14 @@ function sendForm(form) {
 
       closeAllModals();
       btn.disabled = false;
-      window.location.href = "/thanks.html";
+      btn.textContent = btnText;
+      if (thanks === "route") {
+        window.location.href = "/thanks.html";
+      } else {
+        setTimeout(() => {
+          popupAlert.style.display = "block";
+        }, 5000);
+      }
     } catch (error) {
       console.error("Произошла ошибка при отправке формы.", error);
       alert("Произошла ошибка при отправке формы.", error);
