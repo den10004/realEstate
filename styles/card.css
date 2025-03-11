@@ -402,8 +402,30 @@
 }
 
 
+
+
 @media screen and (max-width: 450px) {
     .div4>button {
         width: 100%
+    }
+
+    .trigger {
+        justify-content: space-between;
+    }
+
+    .trigger>.text {
+        flex-basis: 90%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .trigger>.text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .trigger>.text {
+        font-size: 12px;
     }
 }
