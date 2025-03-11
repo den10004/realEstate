@@ -24,6 +24,7 @@
             data-title="Отправьте заявку на размещение объекта в каталоге"
             data-btn="Разместить объект"
             data-sub="Заявка на размещение объекта"
+            data-type="obg"
           >
             Разместить объект
           </button>
@@ -75,6 +76,7 @@
               data-title="Отправьте заявку на размещение объекта в каталоге"
               data-btn="Разместить объект"
               data-sub="Заявка на размещение объекта"
+              data-type="obg"
             >
               Разместить объект
             </button>
@@ -92,6 +94,7 @@
               data-title="Отправьте заявку на размещение объекта в каталоге"
               data-btn="Разместить объект"
               data-sub="Заявка на размещение объекта"
+              data-type="obg"
             >
               Разместить объект
             </button>
@@ -107,6 +110,7 @@
             class="blue-btn header-footer-btn footer-btn-min cosulationOpenModal"
             data-title="Отправьте заявку на размещение объекта а каталоге"
             data-btn="Разместить объект"
+            data-type="obg"
             data-sub="Заявка на размещение объекта"
           >
             Разместить объект
@@ -182,8 +186,6 @@
   const dataFromLocalStorage = localStorage.getItem("name");
   if (dataFromLocalStorage) {
     outputElement.innerHTML = `${dataFromLocalStorage}`;
-  } else {
-    console.log("данных нет");
   }
 </script>
 <noscript

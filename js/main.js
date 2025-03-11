@@ -4,7 +4,6 @@ const openCompilationModal = document.querySelectorAll(".cosulationOpenModal");
 const popupConsultation = document.querySelector(".popup-consultation");
 const popupConsultation2 = document.querySelector(".popup-consultation2");
 const popupAlert = document.querySelector(".popup-alert");
-
 const menuItems = document.getElementsByClassName("list__block");
 const emailBlock = document.getElementById("email-block");
 
@@ -32,7 +31,6 @@ function openModalFunc(title, btn, sub, type) {
   const hiddenInputMail2 = document.getElementById("titleHiddenMail2");
   const btnMark = document.querySelector(".btn-mark");
   const btnMark2 = document.querySelector(".btn-mark2");
-
   if (type == "present") {
     popupConsultation2.style.display = "block";
     modalTitle2.textContent = `${title}`;
@@ -236,9 +234,6 @@ function sendForm(form, thanks, btnText) {
         window.location.href = "/thanks.html";
       } else {
         popupAlert.style.display = "block";
-        setTimeout(() => {
-          popupAlert.style.display = "none";
-        }, 5000);
       }
     } catch (error) {
       console.error("Произошла ошибка при отправке формы.", error);
