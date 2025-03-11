@@ -10,7 +10,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="robots" content="" />
-    <script type="module" crossorigin src="./assets/metrika-e0taE7Os.js"></script>
+    <script type="module" crossorigin src="./assets/metrika-9rRqdJFq.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/metrika-B3K7Y2TG.css">
   </head>
   <body>
@@ -24,6 +24,7 @@
             class="blue-btn header-footer-btn cosulationOpenModal"
             data-title="Отправьте заявку на размещение объекта в каталоге"
             data-btn="Разместить объект"
+            data-type="obg"
             data-sub="Заявка на размещение объекта"
           >
             Разместить объект
@@ -329,6 +330,7 @@
               class="blue-btn header-footer-btn cosulationOpenModal"
               data-title="Отправьте заявку на размещение объекта в каталоге"
               data-btn="Разместить объект"
+              data-type="obg"
               data-sub="Заявка на размещение объекта"
             >
               Разместить объект
@@ -347,6 +349,7 @@
               data-title="Отправьте заявку на размещение объекта в каталоге"
               data-btn="Разместить объект"
               data-sub="Заявка на размещение объекта"
+              data-type="obg"
             >
               Разместить объект
             </button>
@@ -363,6 +366,7 @@
             data-title="Отправьте заявку на размещение объекта а каталоге"
             data-btn="Получить презентацию"
             data-sub="Получить презентацию"
+            data-type="obg"
           >
             Разместить объект
           </button>
@@ -428,6 +432,13 @@
     </div>
   </div>
 </html>
+<script>
+  outputElement = document.getElementById("output");
+  const dataFromLocalStorage = localStorage.getItem("name");
+  if (dataFromLocalStorage) {
+    outputElement.innerHTML = `${dataFromLocalStorage}`;
+  }
+</script>
 
 <noscript
   ><div>
