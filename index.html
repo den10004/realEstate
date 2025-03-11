@@ -3896,7 +3896,7 @@
   <div class="popup-alert darkening popup">
     <div class="window">
       <h2 class="popup-headline modal-title" style="text-align: center">
-        ----, <br />спасибо за заявку!
+        <span id="output"></span>, <br />спасибо за заявку!
         <p
           class="font-p"
           style="color: var(--color-text-gray); margin: 20px 0 40px 0"
@@ -3912,13 +3912,23 @@
     </div>
   </div>
 
-  <script></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="module" src="./js/main.js"></script>
   <script type="module" src="./js/slider.js"></script>
   <script type="module" src="./js/telMask.js"></script>
 
   <script type="module" src="./js/metrika.js"></script>
+
+  <script>
+    outputElement = document.getElementById("output");
+    const dataFromLocalStorage = localStorage.getItem("name");
+    if (dataFromLocalStorage) {
+      outputElement.innerHTML = `${dataFromLocalStorage}`;
+    } else {
+      console.log("данных нет");
+    }
+  </script>
+
   <noscript
     ><div>
       <img

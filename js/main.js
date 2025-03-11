@@ -235,8 +235,9 @@ function sendForm(form, thanks, btnText) {
       if (thanks === "route") {
         window.location.href = "/thanks.html";
       } else {
+        popupAlert.style.display = "block";
         setTimeout(() => {
-          popupAlert.style.display = "block";
+          popupAlert.style.display = "none";
         }, 5000);
       }
     } catch (error) {
