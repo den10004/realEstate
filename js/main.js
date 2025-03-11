@@ -214,9 +214,12 @@ function sendForm(form, thanks, btnText) {
     try {
       const formData = new FormData(form);
       let object = {};
+      /*
+      for (var pair of formData.entries()) {
+        console.log(pair[0]);
+      }*/
 
       fd(formData);
-      console.log(formData);
       const response = await fetch("https://proinvestresort.ru/sendforms.php", {
         method: "POST",
         body: formData,

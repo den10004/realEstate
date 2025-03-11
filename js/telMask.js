@@ -1,51 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let freshInput = true;
-  let eventCalllback = function (e) {
-    let el = e.target,
-      clearVal = el.dataset.phoneClear,
-      matrix = "+7 (___) ___-__-__",
-      i = 0,
-      def = matrix.replace(/\D/g, ""),
-      val = e.target.value.replace(/\D/g, "");
-
-    if (clearVal !== "false" && e.type === "blur") {
-      if (val.length < matrix.match(/([\_\d])/g).length) {
-        e.target.value = "";
-        return;
-      }
-    }
-
-    if (def.length >= val.length) val = def;
-    e.target.value = matrix.replace(/./g, function (a) {
-      return /[_\d]/.test(a) && i < val.length
-        ? val.charAt(i++)
-        : i >= val.length
-        ? ""
-        : a;
-    });
-
-    if (freshInput && i == 2 && e.target.value == "+7 (8") {
-      e.target.value = "+7 (";
-      freshInput = false;
-    }
-  };
-
-  const pasteCallback = async function (e) {
-    e.preventDefault();
-    let pastedText = await navigator.clipboard.readText();
-    if (pastedText[0] == "8") {
-      e.target.value = "7" + pastedText.substring(1);
-      return;
-    }
-    e.target.value = pastedText;
-  };
-
-  let phone_inputs = document.querySelectorAll("input[type=tel]");
-  for (let elem of phone_inputs) {
-    elem.addEventListener("paste", pasteCallback);
-
-    for (let ev of ["input", "blur", "focus"]) {
-      elem.addEventListener(ev, eventCalllback);
-    }
-  }
+const phoneInputs = document.querySelectorAll("input[name=tel]");
+const phoneInputHandler = function (input) {
+  let x = input.value
+    .replace(/\D/g, "")
+    .match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+  const group1 = x[1] ? (x[1] == 9 ? "+7 (9" : "+7") : x[1];
+  const group2 = x[2]
+    ? " (" + (x[2][0] == 8 && x[2][1] == 9 ? "9" : x[2])
+    : x[2];
+  const group3 = x[3] ? ") " + x[3] : x[3];
+  const group4 = x[4] ? "-" + x[4] : x[4];
+  const group5 = x[5] ? "-" + x[5] : x[5];
+  input.value = group1 + group2 + group3 + group4 + group5;
+};
+phoneInputs.forEach((input, idx) => {
+  input.addEventListener("input", (e) => phoneInputHandler(e.target));
 });
