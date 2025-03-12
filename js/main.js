@@ -234,8 +234,10 @@ function sendForm(form, thanks, btnText) {
       btn.disabled = false;
       btn.textContent = btnText;
       if (thanks === "route") {
+        ym(100282784, "reachGoal", "goalLeadsClient");
         window.location.href = "/thanks.html";
       } else {
+        ym(100282784, "reachGoal", "goalLeads");
         popupAlert.style.display = "block";
       }
     } catch (error) {
