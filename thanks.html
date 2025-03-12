@@ -149,15 +149,6 @@
           name="tel"
           required
         />
-
-        <input
-          placeholder="Ваш e-mail"
-          type="email"
-          id="email"
-          name="email"
-          required
-        />
-
         <button type="submit" class="blue-btn" id="send-btn">
           <span class="btn-mark"></span>
         </button>
@@ -182,7 +173,7 @@
 <script type="module" src="./js/metrika.js"></script>
 
 <script>
-  outputElement = document.getElementById("output");
+  const outputElement = document.getElementById("output");
   const dataFromLocalStorage = localStorage.getItem("name");
   if (dataFromLocalStorage) {
     outputElement.innerHTML = `${dataFromLocalStorage}`;

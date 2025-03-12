@@ -238,6 +238,8 @@ function sendForm(form, thanks, btnText) {
         window.location.href = "/thanks.html";
       } else {
         ym(100282784, "reachGoal", "goalLeads");
+        const outputElement = document.getElementById("output-main");
+        outputElement.innerHTML = `${localStorage.getItem("name")}`;
         popupAlert.style.display = "block";
       }
     } catch (error) {
