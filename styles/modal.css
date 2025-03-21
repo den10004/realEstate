@@ -1,0 +1,255 @@
+.darkening {
+    background: rgba(51, 51, 51, 0.72);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.window {
+    max-width: 610px;
+    overflow-y: scroll;
+    padding: 40px 50px;
+    border-radius: 10px;
+    height: auto;
+    max-height: 95vh;
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #fff;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-animation-name: modalMenu;
+    -webkit-animation-duration: 0.4s;
+    animation-name: modalMenu;
+    animation-duration: 0.4s;
+    box-sizing: border-box;
+}
+
+.window::-webkit-scrollbar {
+    width: 0;
+    scrollbar-width: none;
+}
+
+.popup {
+    display: none;
+}
+
+.closeAllModal {
+    background-color: transparent !important;
+}
+
+@-webkit-keyframes modalMenu {
+    from {
+        top: 0vh;
+        opacity: 0;
+    }
+
+    to {
+        top: 5vh;
+        opacity: 1;
+    }
+}
+
+@keyframes modalMenu {
+    from {
+        top: 0vh;
+        opacity: 0;
+    }
+
+    to {
+        top: 5vh;
+        opacity: 1;
+    }
+}
+
+
+.closeAllModal {
+    position: absolute;
+    background: none;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    font-weight: 100;
+    color: var(--color-text-gray);
+    line-height: 1.2;
+    -moz-transform: matrix(0.70710678118655,
+            0.70710678118655,
+            -0.70710678118655,
+            0.70710678118655,
+            0,
+            0);
+    -webkit-transform: matrix(0.70710678118655,
+            0.70710678118655,
+            -0.70710678118655,
+            0.70710678118655,
+            0,
+            0);
+    -ms-transform: matrix(0.70710678118655,
+            0.70710678118655,
+            -0.70710678118655,
+            0.70710678118655,
+            0,
+            0);
+}
+
+.popup-headline {
+    font-size: 30px;
+    color: var(--color-text);
+    line-height: 1.267;
+    width: 95%;
+    font-weight: 500;
+}
+
+.from__modal {
+    margin-top: 45px;
+}
+
+.from__modal>input:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.from__modal>button {
+    height: 70px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+input {
+    border-radius: 8px;
+    background-color: #f1f2f3;
+    width: 100%;
+    height: 70px;
+    border: none;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.accept {
+    font-size: 10px;
+    color: rgb(134, 140, 145);
+    line-height: 1.4;
+    text-align: left;
+}
+
+.accept>span>a {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.form-franchise {
+    display: flex;
+    flex-direction: column;
+}
+
+.connection__list {
+    display: flex;
+    margin: 50px auto 0 auto;
+    justify-content: space-between;
+}
+
+.connection__list>li {
+    width: calc(100% / 4);
+}
+
+.block-active {
+    background-color: var(--color-blue-f9);
+
+}
+
+.block-active>svg {
+    color: var(--color-white);
+}
+
+
+.block-active>span {
+    color: var(--color-white);
+}
+
+.list__block {
+    height: 60px;
+    border-radius: 9px;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-footer);
+    align-items: center;
+}
+
+.list__block>img {
+    margin: 0 auto 10px auto;
+    height: 35px;
+}
+
+
+.form__window {
+    margin-top: 10px;
+}
+
+.form__window>.form-franchise:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.alert-btn {
+    padding: 22px 89px 22px 89px;
+    font-size: 19px;
+    width: 100%
+}
+
+.alert-btn>a {
+    color: var(--color-white);
+}
+
+
+
+
+@media screen and (max-width: 620px) {
+    .popup-headline {
+        font-size: 20px;
+    }
+
+    .window {
+        max-width: calc(100% - 40px);
+        overflow-y: scroll;
+        padding: 30px 20px 30px 20px;
+    }
+
+    .from__modal {
+        margin-top: 25px;
+    }
+
+    .from__modal>button {
+        height: 70px;
+        width: 100%;
+        margin: 25px 0 20px 0;
+        font-size: 16px;
+    }
+
+    .alert-btn {
+        padding: 25px 0 20px 0;
+        font-size: 16px;
+    }
+
+    input {
+        height: 50px;
+        padding-left: 20px;
+    }
+
+    .list__block {
+        font-size: 12px;
+    }
+}

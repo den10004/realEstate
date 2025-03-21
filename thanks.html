@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" type="image/svg+xml" href="./favicon.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Спасибо</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body class="body-style">
+    <header class="header__thanks">
+      <div class="layout">
+        <div class="header__container">
+          <a class="logo" href="/"
+            ><img src="./images/logo.png" alt="logo"
+          /></a>
+          <button
+            class="blue-btn header-footer-btn cosulationOpenModal"
+            data-title="Отправьте заявку на размещение объекта в каталоге"
+            data-btn="Разместить объект"
+            data-sub="Заявка на размещение объекта"
+            data-type="obg"
+          >
+            Разместить объект
+          </button>
+        </div>
+
+        <div class="thanks">
+          <h2><span id="output"></span>, спасибо за заявку!</h2>
+          <p>Мы свяжемся с Вами в ближайшее время.</p>
+
+          <div class="thanks__timetable">
+            График работы: <br />Пн-Пт с 9.00 до 18.00 по МСК
+          </div>
+          <div class="thanks__span">
+            Если Вы оставили заявку в нерабочее время, мы перезвоним Вам на
+            следующий рабочий день.
+          </div>
+
+          <a href="/" class="blue-btn"> Вернуться на сайт</a>
+        </div>
+      </div>
+    </header>
+    <footer>
+      <div class="layout">
+        <div class="footer__top">
+          <div class="footer__top-block">
+            <a class="logo" href="/"
+              ><img src="./images/logo.png" alt="logo"
+            /></a>
+            <div class="footer__tel footer__tel-min">
+              <a href="tel:88001015149">8 (800) 101-51-49</a>
+              <div>Бесплатно по России</div>
+            </div>
+          </div>
+          <p>
+            Представленная информация носит исключительно ознакомительный
+            характер, ни при каких обстоятельствах не является публичной
+            офертой, определяемой положениями статьи 437 ГК РФ. Построенные
+            объекты могут отличаться от представленных 3D-визуализаций,
+            изображений. Все представленные материалы, изображения являются
+            ориентировочными, в них могут быть внесены любые изменения и
+            дополнения. Для получения подробной информации необходимо обратиться
+            к застройщику представленного в каталоге объекта.<br />
+            Не является индивидуальной инвестиционной рекомендацией.
+          </p>
+
+          <div class="footer__medium-mobile">
+            <button
+              class="blue-btn header-footer-btn cosulationOpenModal"
+              data-title="Отправьте заявку на размещение объекта в каталоге"
+              data-btn="Разместить объект"
+              data-sub="Заявка на размещение объекта"
+              data-type="obg"
+            >
+              Разместить объект
+            </button>
+            <a class="footer-polytic" href="/privacy.html"
+              >Политика <br />
+              конфиденциальности</a
+            >
+          </div>
+
+          <div class="footer__tel footer__tel-max">
+            <a href="tel:88001015149">8 (800) 101-51-49</a>
+            <div>Бесплатно по России</div>
+            <button
+              class="blue-btn header-footer-btn cosulationOpenModal"
+              data-title="Отправьте заявку на размещение объекта в каталоге"
+              data-btn="Разместить объект"
+              data-sub="Заявка на размещение объекта"
+              data-type="obg"
+            >
+              Разместить объект
+            </button>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© PLATFORMA, 2025 г.</p>
+          <a class="footer-polytic" href="/privacy.html"
+            >Политика конфиденциальности</a
+          >
+          <button
+            class="blue-btn header-footer-btn footer-btn-min cosulationOpenModal"
+            data-title="Отправьте заявку на размещение объекта а каталоге"
+            data-btn="Разместить объект"
+            data-type="obg"
+            data-sub="Заявка на размещение объекта"
+          >
+            Разместить объект
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <div class="popup-consultation darkening popup">
+    <div class="window">
+      <h2 class="popup-headline">
+        <span class="modal-title"> <div></div></span>
+      </h2>
+
+      <form class="from__modal" id="consultForm">
+        <input type="hidden" id="titleHiddenMail" name="title" value="*" />
+        <input
+          type="hidden"
+          id="titleHiddenData"
+          name="title-mail"
+          value="Заявка на консультацию"
+        />
+        <input
+          placeholder="Ваше имя"
+          type="text"
+          id="name"
+          name="name"
+          required
+          minlength="3"
+        />
+
+        <input
+          placeholder="Номер телефона"
+          type="tel"
+          id="tel"
+          name="tel"
+          required
+        />
+        <button type="submit" class="blue-btn" id="send-btn">
+          <span class="btn-mark"></span>
+        </button>
+
+        <div class="accept">
+          <span
+            >Нажимая кнопку "Получить консультацию", я подтверждаю, что
+            ознакомлен и согласен с условиями 
+            <a href="/privacy.html" target="_blank"
+              >политики &nbsp; обработки  персональных данных</a
+            ></span
+          >
+        </div>
+      </form>
+
+      <button class="closeConsultation closeAllModal">+</button>
+    </div>
+  </div>
+</html>
+<script type="module" src="./js/main.js"></script>
+<script type="module" src="./js/telMask.js"></script>
+<script type="module" src="./js/metrika.js"></script>
+
+<script>
+  const outputElement = document.getElementById("output");
+  const dataFromLocalStorage = localStorage.getItem("name");
+  if (dataFromLocalStorage) {
+    outputElement.innerHTML = `${dataFromLocalStorage}`;
+  }
+</script>
+<noscript
+  ><div>
+    <img
+      src="https://mc.yandex.ru/watch/100282784"
+      style="position: absolute; left: -9999px"
+      alt=""
+    /></div
+></noscript>

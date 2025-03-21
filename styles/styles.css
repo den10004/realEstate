@@ -1,0 +1,129 @@
+@import "./header.css";
+@import "./card.css";
+@import "./footer.css";
+@import "./thanks.css";
+@import "./privacy.css";
+@import "./modal.css";
+@import "./normalize.css";
+@import "../vendor/fonts.css";
+
+
+:root {
+  --color-white: #ffffff;
+  --color-blue: #2c9aff;
+  --color-blue-f3: #2196f3;
+  --color-blue-a3: #1b51a3;
+  --color-blue-f9: #5b9cf9;
+  --color-bg-cards: #f1f2f3;
+  --color-text: rgb(0, 0, 0);
+  --color-text-gray: #969ba0;
+  --color-gray: rgb(134, 140, 145);
+  --color-footer: #0b1f33;
+  --color-footer-text: rgb(120, 139, 159);
+}
+
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background: var(--color-white);
+  font-family: "Gilroy", "sans-serif";
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none
+}
+
+
+.logo>img {
+  width: 153px;
+}
+
+
+.layout {
+  max-width: 1570px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.layout-card {
+  max-width: 1570px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.font-p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+.blue-btn {
+  box-shadow: 0 0 14px var(--color-blue-f3), inset 0 0 0 var(--color-blue-a3);
+  background-color: var(--color-blue-f9);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #2f69c1;
+  color: var(--color-white);
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 1400px) {
+  .layout {
+    max-width: 1180px;
+  }
+
+  .layout-card {
+    max-width: 1180px;
+  }
+
+
+  .font-p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .logo>img {
+    width: 120px;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .layout {
+    max-width: 100%;
+  }
+
+  .layout-card {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .font-p {
+    font-size: 14px;
+  }
+}

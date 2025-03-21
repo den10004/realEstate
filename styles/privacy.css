@@ -1,0 +1,76 @@
+.header__polytic {
+    background: var(--color-blue-f3) url(./../images/header-thanks.webp) center;
+    height: 180px;
+}
+
+.bg-layout {
+    background-color: #f1f2f4;
+}
+
+
+.polytic {
+    padding: 150px 0 100px 0;
+}
+
+
+.page-title {
+    color: #0c0c0e;
+    margin: 0 0 38px;
+    padding-top: 75px;
+    border-color: #dedfe1;
+    font-weight: 500;
+    padding-bottom: 31px;
+    border-bottom: thin solid rgb(179 176 176 / 25%);
+}
+
+.page-title>h1 {
+    font-size: 74px;
+}
+
+
+.polytic>a {
+    padding: 22px 89px 22px 89px;
+    font-size: 19px;
+}
+
+.polytic>ol {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1400px) {
+    .header__polytic {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .polytic {
+        padding: 50px 0 100px 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header__polytic {
+        height: 100px;
+    }
+
+    .page-title>h1 {
+        font-size: 30px;
+    }
+
+    .page-title {
+        padding-top: 0px;
+    }
+
+    .polytic>a {
+        padding: 20px 42px 20px 42px;
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .page-title>h1 {
+        font-size: 26px;
+    }
+}
