@@ -190,6 +190,7 @@ function renderCards(cards) {
       slide.classList.add("swiper-slide");
       const imageElement = document.createElement("img");
       imageElement.src = imageSrc;
+      imageElement.loading = "lazy";
       imageElement.alt = card.title;
 
       slide.appendChild(imageElement);
