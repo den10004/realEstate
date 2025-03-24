@@ -1,4 +1,4 @@
-export const cards = [
+const cards = [
   {
     title: "Жилой комплекс Riviera Santa Monica",
     class: "Премиум",
@@ -58,3 +58,5 @@ export const cards = [
     ],
   },
 ];
+
+export default cards;

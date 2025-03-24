@@ -1,6 +1,4 @@
-import { cards } from "./cardArr";
-
-console.log(cards);
+import cards from "./cardArr";
 
 function renderCards(cards) {
   const container = document.getElementById("cards-container"); // Контейнер для карточек
