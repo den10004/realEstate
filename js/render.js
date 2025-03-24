@@ -77,10 +77,51 @@ function renderCards(cards) {
     }
 
     const div3 = document.createElement("div");
+    const div3min = document.createElement("div");
+    const triggermin = document.createElement("div");
+    const textmin = document.createElement("div");
     div3.classList.add("div3");
-    div3.classList.add("font-p");
+    div3min.classList.add("div3min");
+    triggermin.classList.add("trigger");
+    triggermin.classList.add("divmin");
+    textmin.classList.add("text");
+    textmin.textContent =
+      "Оставьте заявку и получите презентацию проекта, планировки и цены";
+    triggermin.appendChild(textmin);
+    div3.appendChild(div3min);
+    div3min.appendChild(triggermin);
+    const iconmin = document.createElement("div");
+    iconmin.classList.add("icon");
+    iconmin.innerHTML += `<svg
+    style="transform: rotateZ(90deg)"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="currentColor"
+    class="bi bi-arrow-90deg-right"
+    viewBox="0 0 16 16"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708z"
+    ></path>
+  </svg>`;
+    triggermin.appendChild(iconmin);
     div3.id = card.id;
-    div3.textContent = card.description;
+    const buttonmin = document.createElement("button");
+    buttonmin.innerHTML = `<div class="icon-pdf">Получить презентацию<img src="./images/pdf.png" /></div>`;
+    buttonmin.classList.add("blue-btn");
+    buttonmin.classList.add("cosulationOpenModal");
+    buttonmin.setAttribute("data-title", `${card.btntitle}`);
+    buttonmin.setAttribute("data-btn", "Получить презентацию");
+    buttonmin.setAttribute("data-type", `${card.btnsub}`);
+    buttonmin.setAttribute("data-type", "present");
+    buttonmin.setAttribute("data-sub", "sd");
+    div3min.appendChild(buttonmin);
+    const divp = document.createElement("div");
+    div3.appendChild(divp);
+    divp.classList.add("font-p");
+    divp.textContent = card.description;
     cardElement.appendChild(div3);
 
     const div4 = document.createElement("div");

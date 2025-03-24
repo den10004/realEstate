@@ -57,18 +57,4 @@ export const cards = [
       "./../images/neskuchny garden/7.webp",
     ],
   },
-  {
-    title: "Карточка 3",
-    class: "Премиум",
-    location: "Таиланд, Паттайя, Джомтьен",
-    area: "29 - 325 м²",
-    price: "62 000 $",
-    about: "34 этажа, 446 квартиры",
-    plan: "1, 2, 3 - комнатные, пентхаусы",
-    deadline: "2025-2028",
-    sea: "1 км",
-    developer: "The Riviera Group Thailand",
-    id: "block3",
-    images: ["image1-1.jpg", "image1-2.jpg", "image1-3.jpg"],
-  },
 ];

@@ -79,7 +79,7 @@ function getUrlParameter(name) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-// Получаем UTM-параметры из URL
+// Получение UTM-параметров из URL
 let utm_source = getUrlParameter("utm_source");
 let utm_medium = getUrlParameter("utm_medium");
 let utm_campaign = getUrlParameter("utm_campaign");
@@ -94,7 +94,7 @@ let utm_position_type = getUrlParameter("utm_position_type");
 let utm_source_type = getUrlParameter("utm_source_type");
 let yclid = getUrlParameter("yclid");
 
-// Устанавливаем куки с UTM-метками
+// Устанавка куки с UTM-метками
 if (utm_source !== null && utm_source !== "") {
   document.cookie = `utm_source=${encodeURIComponent(
     utm_source
