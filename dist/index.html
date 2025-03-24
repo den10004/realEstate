@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon-BX6sHT_3.png" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon-BX6sHT_3.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Каталог курортной недвижимости в России и за рубежом</title>
@@ -17,9 +17,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script type="module" crossorigin src="/assets/index-KN2g1R5o.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/metrika-D5Ajp44C.js">
-    <link rel="stylesheet" crossorigin href="/assets/metrika-BXgN6mQ-.css">
+    <script type="module" crossorigin src="./assets/index-DxZ3CSJp.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/metrika-2UybXWuP.js">
+    <link rel="stylesheet" crossorigin href="./assets/metrika-Bd25j0lY.css">
   </head>
   <body>
     <header class="header">
@@ -42,12 +42,18 @@
         <h1>Курортная недвижимость в России и за рубежом</h1>
         <p>для жилья, отдыха и инвестиций</p>
       </div>
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="Россия">Россия</button>
+        <button class="filter-btn" data-filter="Турция">Турция</button>
+        <button class="filter-btn" data-filter="Таиланд">Таиланд</button>
+      </div>
     </header>
 
     <section class="cards">
       <div class="layout-card">
         <div class="block1"></div>
-        <div id="cards-container"></div>
+        <div class="cards-container" id="cards-container"></div>
         <!--
         <div class="card">
           <div class="div1">

@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import imagemin from "vite-plugin-imagemin";
 
 export default defineConfig({
-  base: "/",
+  base: "",
   assetsInclude: ["**/*.ico"],
   plugins: [
     imagemin({

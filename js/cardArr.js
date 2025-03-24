@@ -1,9 +1,9 @@
-const cards = [
+const cardsData = [
   {
     title: "Жилой комплекс Riviera Santa Monica",
     class: "Премиум",
     location: "Таиланд, Паттайя, Джомтьен",
-    country: "rus",
+    category: "Таиланд",
     area: "29 - 325 м²",
     price: "62 000 $",
     about: "34 этажа, 446 квартиры",
@@ -12,7 +12,7 @@ const cards = [
     sea: "1 км",
     developer: "The Riviera Group Thailand",
     description:
-      "Комплекс расположен в престижном районе с развитой и близостью к пляжу, а из окон открываются виды на море. Удобное расположение: всего в нескольких минутах езды до пляжа, ключевых объектов инфраструктуры и рядом с основными дорожными развязками. Комплекс идеально подходит как для комфортного отдыха, так и для инвестиций - сдачи в аренду или перепрода",
+      "Комплекс расположен в престижном районе с развитой и близостью к пляжу, а из окон открываются виды на море. Удобное расположение: всего в нескольких минутах езды до пляжа, ключевых объектов инфраструктуры и рядом с основными дорожными развязками. Комплекс идеально подходит как для комфортного отдыха, так и для инвестиций - сдачи в аренду или перепродажи",
     id: "block1",
     pay: "рассрочка",
     benefit: "24%",
@@ -29,7 +29,7 @@ const cards = [
   {
     title: "Гостиничный комплекс Нескучный сад",
     class: "Премиум",
-    country: "rus",
+    category: "Россия",
     location: "Россия, Краснодарский край, г. Сочи",
     area: "22 м² - 136 м²",
     price: "26 200 000 ₽",
@@ -50,15 +50,106 @@ const cards = [
     btnsub: "Презентация гостиничного комплекса Нескучный сад",
 
     images: [
-      "/images/neskuchny garden/1.webp",
-      "/images/neskuchny garden/2.webp",
-      "/images/neskuchny garden/3.webp",
-      "/images/neskuchny garden/4.webp",
-      "/images/neskuchny garden/5.webp",
-      "/images/neskuchny garden/6.webp",
-      "/images/neskuchny garden/7.webp",
+      "/images/neskuchny_garden/1.webp",
+      "/images/neskuchny_garden/2.webp",
+      "/images/neskuchny_garden/3.webp",
+      "/images/neskuchny_garden/4.webp",
+      "/images/neskuchny_garden/5.webp",
+      "/images/neskuchny_garden/6.webp",
+      "/images/neskuchny_garden/7.webp",
+    ],
+  },
+  {
+    title: "Гостиничный комплекс LIVINGSTON",
+    class: "Премиум",
+    category: "Россия",
+    location: "Россия, Краснодарский край, г. Сочи",
+    area: "от 18 - 187 м²",
+    price: "15 920 000 ₽",
+    about: "888 номеров",
+    plan: "студии, 1, 2, 3 - комнатные",
+    deadline: "2 квартал 2026 г",
+    sea: "5 мин",
+    developer: "ООО «СочиОйлСтрой»",
+    description:
+      "ГК «Livingstone» располагается в туристическом сердце города — микрорайоне Мамайка, который давно полюбился гостям и жителям города. Экологически чистый район с богатой инфраструктурой и  близостью к морю. Прогулка в LIVINGSTON к морю по живописному парку займет всего 5 минут. Окружённый тенью деревьев, широкий и чистый, с удобным входом в воду, пляж у отеля подарит уединение и гармонию с природой.",
+    declaration: "https://наш.дом.рф/",
+    id: "block2",
+    pay: "ипотека, рассрочка",
+    benefit: "40%",
+    income: "3 750 000 ₽",
+    btntitle:
+      "Куда вам отправить презентацию гостиничного комплекса LIVINGSTON?",
+    btnsub: "Презентация гостиничного комплекса LIVINGSTON",
+
+    images: [
+      "/images/LIVINGSTON/1.webp",
+      "/images/LIVINGSTON/2.webp",
+      "/images/LIVINGSTON/3.webp",
+      "/images/LIVINGSTON/4.webp",
+      "/images/LIVINGSTON/5.webp",
+      "/images/LIVINGSTON/6.webp",
+    ],
+  },
+
+  {
+    title: "Жилой комплекс Ozdence Hill Luxury Residence",
+    class: "Премиум",
+    category: "Турция",
+    location: "Турция, Алания, Каргыджак",
+    area: "от 69 - 491 м²",
+    price: "310 000 $",
+    about: "138 квартир",
+    plan: "студии, 1, 2, 3, 4 - комнатные",
+    deadline: "2 квартал 2026 г",
+    developer: "OZDENCE GROUP",
+    description:
+      "Özdence Hill Luxury Residence — это роскошный жилой комплекс, который предлагает своим собственникам широкий спектр удобств и возможностей для комфортного проживания. В резиденции расположенытеннисные и баскетбольные площадки, мини-гольф, бассейн с водным парком, рестораны и бары высокого класса.",
+    id: "block2",
+    pay: "рассрочка",
+    benefit: "30%",
+    income: "22 400 €",
+    btntitle: "Куда вам отправить презентацию Ozdence Hill Luxury Residence?",
+    btnsub: "Презентация Ozdence Hill Luxury Residence",
+
+    images: [
+      "/images/Ozdence/0.webp",
+      "/images/Ozdence/1.webp",
+      "/images/Ozdence/2.webp",
+      "/images/Ozdence/3.webp",
+      "/images/Ozdence/4.webp",
+      "/images/Ozdence/5.webp",
+    ],
+  },
+  {
+    title: "",
+    class: "Премиум",
+    category: "Турция",
+    location: "Турция, Алания, Каргыджак",
+    area: "от 69 - 491 м²",
+    price: "310 000 $",
+    about: "138 квартир",
+    plan: "студии, 1, 2, 3, 4 - комнатные",
+    deadline: "2 квартал 2026 г",
+    developer: "OZDENCE GROUP",
+    description:
+      "Özdence роскошный жилой комплекс, который предлагает своим собственникам широкий спектр удобств и возможностей для комфортного проживания. В резиденции расположенытеннисные и баскетбольные площадки, мини-гольф, бассейн с водным парком, рестораны и бары высокого класса.",
+    id: "block2",
+    pay: "рассрочка",
+    benefit: "30%",
+    income: "22 400 €",
+    btntitle: "Куда вам отправить презентацию Ozdence Hill Luxury Residence?",
+    btnsub: "Презентация Ozdence Hill Luxury Residence",
+
+    images: [
+      "/images/Ozdence/0.webp",
+      "/images/Ozdence/1.webp",
+      "/images/Ozdence/2.webp",
+      "/images/Ozdence/3.webp",
+      "/images/Ozdence/4.webp",
+      "/images/Ozdence/5.webp",
     ],
   },
 ];
 
-export default cards;
+export default cardsData;
