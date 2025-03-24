@@ -83,7 +83,6 @@ function renderCards(cards) {
     div3.classList.add("div3");
     div3min.classList.add("div3min");
     triggermin.classList.add("trigger");
-    triggermin.classList.add("divmin");
     textmin.classList.add("text");
     textmin.textContent =
       "Оставьте заявку и получите презентацию проекта, планировки и цены";
@@ -147,6 +146,7 @@ function renderCards(cards) {
 
     const trigger = document.createElement("div");
     trigger.classList.add("trigger");
+    trigger.classList.add("divmin");
     div4.appendChild(trigger);
 
     const text = document.createElement("div");
@@ -175,6 +175,7 @@ function renderCards(cards) {
 
     const button = document.createElement("button");
     button.classList.add("blue-btn");
+    button.classList.add("divmin");
     button.classList.add("cosulationOpenModal");
     button.setAttribute("data-title", `${card.btntitle}`);
     button.setAttribute("data-btn", "Получить презентацию");

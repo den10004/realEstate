@@ -7,7 +7,10 @@
     height: 10px;
 }
 
-.card-position {
+.card-position {}
+
+
+#cards-container>.card:first-child {
     position: relative;
     z-index: 2;
     margin-top: -105px;
