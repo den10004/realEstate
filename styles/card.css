@@ -7,8 +7,6 @@
     height: 10px;
 }
 
-.card-position {}
-
 
 #cards-container>.card:first-child {
     position: relative;
