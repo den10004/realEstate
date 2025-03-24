@@ -20,10 +20,10 @@ const cards = [
     btntitle: "Куда вам отправить презентацию The Riviera Santa Monica?",
     btnsub: "Презентация The Riviera Santa Monica",
     images: [
-      "/images/RivetaSantaMonica/Riviera Santa Monica1.webp",
-      "/images/RivetaSantaMonica/Riviera Santa Monica3.webp",
-      "/images/RivetaSantaMonica/Riviera Santa Monica4.webp",
-      "/images/RivetaSantaMonica/Riviera Santa Monica5.webp",
+      "/images/RivetaSantaMonica/RivieraSantaMonica1.webp",
+      "/images/RivetaSantaMonica/RivieraSantaMonica3.webp",
+      "/images/RivetaSantaMonica/RivieraSantaMonica4.webp",
+      "/images/RivetaSantaMonica/RivieraSantaMonica5.webp",
     ],
   },
   {
