@@ -4,9 +4,13 @@ import { openModalFunc } from "./main";
 const swipers = new Map();
 
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("cards-container");
   const cardsContainer = document.getElementById("cards-container");
   const filterButtons = document.querySelectorAll(".filter-btn");
+
+  //добавление активности кнопки "все"
+  document
+    .getElementById("filter-controls")
+    .firstElementChild.classList.add("active");
 
   renderCards(cardsData);
   // Обработчики для кнопок фильтрации
@@ -22,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Функция фильтрации карточек
   function filterCards(filter) {
-    if (filter === "all") {
+    if (filter === "все") {
       renderCards(cardsData);
     } else {
       const matchedCards = cardsData.filter((card) => card.category === filter);
@@ -60,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cardElement.dataset.category = card.category;
         cardElement.classList.add("card");
-        container.dataset.category = card.category;
+        cardsContainer.dataset.category = card.category;
         const div1 = document.createElement("div");
         div1.classList.add("div1");
         cardElement.appendChild(div1);
@@ -250,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
           slide.appendChild(imageElement);
           swiperWrapper.appendChild(slide);
         });
-        container.appendChild(cardElement);
+        cardsContainer.appendChild(cardElement);
 
         button.addEventListener("click", () => {
           openModalFunc(
@@ -274,3 +278,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+const filter = [...new Set(cardsData.map((card) => card.category))];
+filter.unshift("все");
+
+const productsHTML = filter
+  .map(
+    (product) =>
+      `<button class="filter-btn blue-btn" data-filter="${product}">${product}</button>`
+  )
+  .join("");
+
+document.getElementById("filter-controls").innerHTML = productsHTML;
