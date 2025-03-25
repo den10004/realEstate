@@ -24,10 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const cardElement = document.createElement("div");
       cardElement.className = `card`;
       cardElement.dataset.category = card.category;
-      // const cardElement = document.createElement("div");
       cardElement.classList.add("card");
       container.dataset.category = card.category;
-      cardElement.innerHTML = `<span>${getCategoryName(card.category)}</span>`;
+      // cardElement.innerHTML = `<span>${getCategoryName(card.category)}</span>`;
       const div1 = document.createElement("div");
       div1.classList.add("div1");
       cardElement.appendChild(div1);
@@ -229,7 +228,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
   function updateCardsVisibility(filter) {
     const allCards = document.querySelectorAll(".card");
     allCards.forEach((card) => {
@@ -239,14 +237,5 @@ document.addEventListener("DOMContentLoaded", () => {
         card.classList.add("inactive");
       }
     });
-  }
-
-  function getCategoryName(category) {
-    const categories = {
-      Россия: "Россия",
-      Турция: "Турция",
-      Таиланд: "Таиланд",
-    };
-    return categories[category] || category;
   }
 });
