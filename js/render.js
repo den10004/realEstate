@@ -1,6 +1,9 @@
 import cardsData from "./cardArr";
 import { openModalFunc } from "./main";
 
+const counties = [...new Set(cardsData.map((card) => card.category))];
+const noun = [...new Set(cardsData.map((card) => card.noun))];
+
 const swipers = new Map();
 document.addEventListener("DOMContentLoaded", () => {
   const cardsContainer = document.getElementById("cards-container");
@@ -21,10 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const output = document.getElementById("cat");
 
-      if (filterValue != "все") {
-        output.textContent = filterValue;
-      } else {
-        output.textContent = "России и за рубежом";
+      for (let i = 0; i < counties.length; i++) {
+        if (filterValue === counties[i]) {
+          output.textContent = noun[i];
+          break;
+        } else if (filterValue === "все") {
+          output.textContent = "России и за рубежом";
+        }
       }
       filterCards(filterValue);
     });
@@ -284,7 +290,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
 const filter = [...new Set(cardsData.map((card) => card.category))];
 filter.unshift("все");
 
