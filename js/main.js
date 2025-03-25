@@ -24,7 +24,7 @@ closeAllModal.forEach((el) =>
   })
 );
 
-function openModalFunc(title, btn, sub, type) {
+export function openModalFunc(title, btn, sub, type) {
   const modalTitle = document.querySelector(".modal-title");
   const modalTitle2 = document.querySelector(".modal-title2");
   const hiddenInputMail = document.getElementById("titleHiddenMail");
@@ -47,7 +47,6 @@ function openModalFunc(title, btn, sub, type) {
 
 openCompilationModal.forEach((el) =>
   el.addEventListener("click", function (e) {
-    console.log(el);
     const type = e.target.dataset.type;
     const title = e.target.dataset.title || "и получите консультацию";
     const sub = e.target.dataset.sub || "Получить консультацию";

@@ -371,10 +371,6 @@
         padding: 0 20px 20px 20px;
     }
 
-    .div3 {
-        /*padding: 20px 20px 0 20px;*/
-    }
-
     .div3>button {
         margin-top: 20px;
     }
@@ -409,11 +405,6 @@
         display: none !important;
     }
 
-    /*
-    .div4>button {
-        margin: 15px auto 0 auto;
-    }
-*/
     .trigger {
         display: flex;
         font-size: 15px;
@@ -431,6 +422,12 @@
     }
 }
 
+
+@media screen and (max-width: 500px) {
+    .layout-card>.cards-container {
+        margin-top: -150px;
+    }
+}
 
 @media screen and (max-width: 450px) {
     .div4>button {

@@ -7,21 +7,25 @@
 }
 
 .filter-btn {
-    padding: 8px 16px;
+    padding: 10px 15px;
     background: #f0f0f0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: 600;
 }
 
 .filter-btn:hover {
     background: #ddd;
+
 }
 
 .filter-btn.active {
-    background: #4caf50;
-    color: white;
+    background-color: #ffd912;
+    box-shadow: 0 0 14px #dda11e, inset 0px 0px 9px 0px #fed45f;
+    border-bottom: 3px solid #e0a246;
+    color: var(--color-footer);
 }
 
 .cards-container {
@@ -36,4 +40,46 @@
 .card.inactive {
     opacity: 1;
     order: 1;
+}
+
+.other-divider {
+    padding: 20px 0;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--color-text-gray);
+}
+
+
+@media screen and (max-width: 1300px) {
+    .filter-controls {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .filter-controls {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .other-divider {
+        font-size: 20px;
+    }
+
+    .filter-btn {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .filter-controls {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 337px) {
+    .filter-controls {
+        margin-top: 30px;
+    }
 }

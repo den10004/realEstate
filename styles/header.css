@@ -92,10 +92,6 @@
         margin: 58px auto 0 auto;
         line-height: 1.1;
     }
-
-    .header>div>p {
-        margin-top: 30px;
-    }
 }
 
 @media screen and (max-width: 500px) {
