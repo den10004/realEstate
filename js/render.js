@@ -2,7 +2,6 @@ import cardsData from "./cardArr";
 import { openModalFunc } from "./main";
 
 const swipers = new Map();
-
 document.addEventListener("DOMContentLoaded", () => {
   const cardsContainer = document.getElementById("cards-container");
   const filterButtons = document.querySelectorAll(".filter-btn");
@@ -18,8 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       filterButtons.forEach((btn) => btn.classList.remove("active"));
       button.classList.add("active");
-
       const filterValue = button.dataset.filter;
+
+      const output = document.getElementById("cat");
+
+      if (filterValue != "все") {
+        output.textContent = filterValue;
+      } else {
+        output.textContent = "России и за рубежом";
+      }
       filterCards(filterValue);
     });
   });
