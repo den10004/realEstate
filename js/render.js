@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
           output.textContent = noun[i];
           break;
         } else if (filterValue === "все") {
-          output.textContent = "России и за рубежом";
+          output.textContent = "за рубежом";
         }
       }
       filterCards(filterValue);
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Разделитель "Другие"
         const divider = document.createElement("div");
         divider.className = "other-divider";
-        divider.textContent = "Другие варианты";
+        divider.textContent = "Другие страны";
         cardsContainer.appendChild(divider);
         isOtherSection = true;
       } else {
@@ -117,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const p8 = document.createElement("p");
         const p9 = document.createElement("p");
         const p10 = document.createElement("p");
+        const p11 = document.createElement("p");
 
         p.innerHTML += `Класс недвижимости: <span>${card.class}</span>`;
         p2.innerHTML += `Локация: <span>${card.location}</span>`;
@@ -128,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
         p8.innerHTML += `До моря: <span>${card.sea}</span>`;
         p9.innerHTML += `Застройщик: <span>${card.developer}</span>`;
         p10.innerHTML += `Проектная декларация: <span><a target="_blank" href="${card.declaration}">наш.дом.рф</a></span>`;
-
+        p11.innerHTML += `Виды: <span>${card.view}</span>`;
         div2.appendChild(p);
         div2.appendChild(p2);
         div2.appendChild(p3);
@@ -142,6 +143,9 @@ document.addEventListener("DOMContentLoaded", () => {
         div2.appendChild(p9);
         if (card.declaration) {
           div2.appendChild(p10);
+        }
+        if (card.view) {
+          div2.appendChild(p11);
         }
 
         const div3 = document.createElement("div");
