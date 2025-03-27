@@ -35,7 +35,7 @@ footer {
     text-align: right;
 }
 
-.footer__tel>a {
+.footer__tel>span>a {
     font-size: 24px;
     color: var(--color-white);
     text-align: right;
@@ -192,7 +192,7 @@ footer>.layout {
         padding-bottom: 20px;
     }
 
-    .footer__tel>a {
+    .footer__tel>span>a {
         font-size: 16px;
     }
 

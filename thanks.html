@@ -54,7 +54,7 @@
               ><img src="./images/logo.png" alt="logo"
             /></a>
             <div class="footer__tel footer__tel-min">
-              <a href="tel:88001015149">8 (800) 101-51-49</a>
+              <span class="teladd"></span>
               <div>Бесплатно по России</div>
             </div>
           </div>
@@ -87,7 +87,7 @@
           </div>
 
           <div class="footer__tel footer__tel-max">
-            <a href="tel:88001015149">8 (800) 101-51-49</a>
+            <span class="teladd"></span>
             <div>Бесплатно по России</div>
             <button
               class="blue-btn header-footer-btn cosulationOpenModal"
@@ -102,7 +102,7 @@
         </div>
 
         <div class="footer__bottom">
-          <p>© PLATFORMA, 2025 г.</p>
+          <p>© PLATFORMA, <span id="year"></span>г.</p>
           <a class="footer-polytic" href="/privacy.html"
             >Политика конфиденциальности</a
           >
@@ -169,6 +169,7 @@
   </div>
 </html>
 <script type="module" src="./js/main.js"></script>
+<script type="module" src="./js/renderVar.js"></script>
 <script type="module" src="./js/telMask.js"></script>
 <script type="module" src="./js/metrika.js"></script>
 

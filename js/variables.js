@@ -9,3 +9,7 @@ export const tailandnoun = "Таиланда";
 export const tyrkeynoun = "Турции";
 export const indonesianoun = "Индонезии";
 export const georgianoun = "Грузии";
+
+export const year = "2025";
+export const tel = "8 (800) 101-51-49";
+export const tel2 = "tel:88001015149";
