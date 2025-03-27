@@ -17,8 +17,8 @@
 }
 
 .filter-btn:hover {
-    background: #ddd;
-
+    background: var(--color-blue);
+    box-shadow: 0;
 }
 
 .filter-btn.active {
