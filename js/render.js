@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
         p4.innerHTML += `Цена: <span>от ${card.price}</span>`;
         p5.innerHTML += `О проекте: <span>${card.about}</span>`;
         p6.innerHTML += `Планировки: <span>${card.plan}</span>`;
-        p7.innerHTML += `Срок сдачи: <span>${card.deadline} год</span>`;
+        p7.innerHTML += `Срок сдачи: <span>${card.deadline}</span>`;
         p8.innerHTML += `До моря: <span>${card.sea}</span>`;
         p9.innerHTML += `Застройщик: <span>${card.developer}</span>`;
         p10.innerHTML += `Проектная декларация: <span><a target="_blank" href="${card.declaration}">наш.дом.рф</a></span>`;
