@@ -604,11 +604,13 @@ const cardsData = [
     btnsub: "Презентация ЖК Azizi Riviera",
 
     images: [
-      "/images/Platinum By/1.webp",
-      "/images/Platinum By/2.webp",
-      "/images/Platinum By/3.webp",
-      "/images/Platinum By/4.webp",
-      "/images/Platinum Ba/5.webp",
+      "/images/Azizi Riviera/1.webp",
+      "/images/Azizi Riviera/2.webp",
+      "/images/Azizi Riviera/3.webp",
+      "/images/Azizi Riviera/4.webp",
+      "/images/Azizi Riviera/5.webp",
+      "/images/Azizi Riviera/6.webp",
+      "/images/Azizi Riviera/7.webp",
     ],
   },
   {
@@ -634,11 +636,15 @@ const cardsData = [
     btnsub: "Презентация ЖК Hartland Greens",
 
     images: [
-      "/images/Platinum By/1.webp",
-      "/images/Platinum By/2.webp",
-      "/images/Platinum By/3.webp",
-      "/images/Platinum By/4.webp",
-      "/images/Platinum Ba/5.webp",
+      "/images/Hartland Greens/1.webp",
+      "/images/Hartland Greens/2.webp",
+      "/images/Hartland Greens/3.webp",
+      "/images/Hartland Greens/4.webp",
+      "/images/Hartland Greens/5.webp",
+      "/images/Hartland Greens/6.webp",
+      "/images/Hartland Greens/7.webp",
+      "/images/Hartland Greens/8.webp",
+      "/images/Hartland Greens/9.webp",
     ],
   },
   {
@@ -664,11 +670,13 @@ const cardsData = [
     btnsub: "Презентация ЖК Emaar South Golf Views",
 
     images: [
-      "/images/Platinum By/1.webp",
-      "/images/Platinum By/2.webp",
-      "/images/Platinum By/3.webp",
-      "/images/Platinum By/4.webp",
-      "/images/Platinum Ba/5.webp",
+      "/images/Emaar South Golf Views/1.webp",
+      "/images/Emaar South Golf Views/2.webp",
+      "/images/Emaar South Golf Views/3.webp",
+      "/images/Emaar South Golf Views/4.webp",
+      "/images/Emaar South Golf Views/5.webp",
+      "/images/Emaar South Golf Views/6.webp",
+      "/images/Emaar South Golf Views/7.webp",
     ],
   },
   {
@@ -694,11 +702,12 @@ const cardsData = [
     btnsub: "Презентация VIDA Residences Dubai Marina",
 
     images: [
-      "/images/Platinum By/1.webp",
-      "/images/Platinum By/2.webp",
-      "/images/Platinum By/3.webp",
-      "/images/Platinum By/4.webp",
-      "/images/Platinum Ba/5.webp",
+      "/images/Vida residences/1.webp",
+      "/images/Vida residences/2.webp",
+      "/images/Vida residences/3.webp",
+      "/images/Vida residences/4.webp",
+      "/images/Vida residences/5.webp",
+      "/images/Vida residences/6.webp",
     ],
   },
   {
@@ -724,11 +733,12 @@ const cardsData = [
     btnsub: "Презентация Creek Horizon",
 
     images: [
-      "/images/Platinum By/1.webp",
-      "/images/Platinum By/2.webp",
-      "/images/Platinum By/3.webp",
-      "/images/Platinum By/4.webp",
-      "/images/Platinum Ba/5.webp",
+      "/images/Creek Horizon/1.webp",
+      "/images/Creek Horizon/2.webp",
+      "/images/Creek Horizon/3.webp",
+      "/images/Creek Horizon/4.webp",
+      "/images/Creek Horizon/5.webp",
+      "/images/Creek Horizon/6.webp",
     ],
   },
 ];
