@@ -130,20 +130,47 @@ document.addEventListener("DOMContentLoaded", () => {
         p9.innerHTML += `Застройщик: <span>${card.developer}</span>`;
         p10.innerHTML += `Проектная декларация: <span><a target="_blank" href="${card.declaration}">наш.дом.рф</a></span>`;
         p11.innerHTML += `Виды: <span>${card.view}</span>`;
-        div2.appendChild(p);
-        div2.appendChild(p2);
-        div2.appendChild(p3);
-        div2.appendChild(p4);
-        div2.appendChild(p5);
-        div2.appendChild(p6);
-        div2.appendChild(p7);
+
+        if (card.class) {
+          div2.appendChild(p);
+        }
+
+        if (card.location) {
+          div2.appendChild(p2);
+        }
+
+        if (card.price) {
+          div2.appendChild(p4);
+        }
+
+        if (card.about) {
+          div2.appendChild(p5);
+        }
+
+        if (card.area) {
+          div2.appendChild(p3);
+        }
+
+        if (card.plan) {
+          div2.appendChild(p6);
+        }
+
+        if (card.deadline) {
+          div2.appendChild(p7);
+        }
+
         if (card.sea) {
           div2.appendChild(p8);
         }
-        div2.appendChild(p9);
+
+        if (card.developer) {
+          div2.appendChild(p9);
+        }
+
         if (card.declaration) {
           div2.appendChild(p10);
         }
+
         if (card.view) {
           div2.appendChild(p11);
         }
