@@ -1684,5 +1684,5 @@ const cardsData = [
     ],
   },
 ];
-console.log(cardsData.length + 1);
+
 export default cardsData;
