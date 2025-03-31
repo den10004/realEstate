@@ -1000,7 +1000,7 @@ const cardsData = [
     ],
   },
   {
-    title: "SkyLine",
+    title: "Виллы SkyLine",
     category: `${indonesia}`,
     noun: `${indonesianoun}`,
     location: "Индонезия, о. Бали, г. Убудт",
@@ -1016,8 +1016,8 @@ const cardsData = [
     pay: "рассрочка",
     benefit: "5 681 872 ₽",
     income: "3 214 985 ₽",
-    btntitle: "Куда вам отправить презентацию виллы SkyLine?",
-    btnsub: "Презентация виллы SkyLine",
+    btntitle: "Куда вам отправить презентацию вилл SkyLine?",
+    btnsub: "Презентация вилл SkyLine",
 
     images: [
       "/images/SkyLine/1.webp",
@@ -1072,7 +1072,7 @@ const cardsData = [
     noun: `${indonesianoun}`,
     location: "Индонезия, Бадунг, район Чангу",
     area: "25 - 230 м²",
-    price: "от 11 786 600 ₽",
+    price: "11 786 600 ₽",
     about: "159 апартаментов, таунхаусов и вилл",
     plan: "1+1, 2+1, 3+1",
     deadline: "1 квартал 2027 г.",
