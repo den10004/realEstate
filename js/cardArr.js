@@ -1085,8 +1085,8 @@ const cardsData = [
     pay: "рассрочка",
     benefit: "3 535 980 ₽",
     income: "1 178 660 ₽",
-    btntitle: "Куда вам отправить презентацию вилл Elysium?",
-    btnsub: "Презентация вилл Elysium",
+    btntitle: "Куда вам отправить презентацию комплекса вилл Elysium?",
+    btnsub: "Презентация комплекса вилл Elysium",
 
     images: [
       "/images/Elysium/1.webp",
@@ -1214,8 +1214,8 @@ const cardsData = [
     pay: "рассрочка, ипотека",
     benefit: "30 000 $",
     income: "7 480 $",
-    btntitle: "Куда вам отправить презентацию Апарт-отеля Geuz Tower?",
-    btnsub: "Презентация Апарт-отеля Geuz Tower",
+    btntitle: "Куда вам отправить презентацию Апарт-отеля Geuz Towers?",
+    btnsub: "Презентация Апарт-отеля Geuz Towers",
 
     images: [
       "/images/Geuz Towers/4.webp",
