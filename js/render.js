@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "./../styles/swiper.css";
 
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 const counties = [...new Set(cardsData.map((card) => card.category))];
 const noun = [...new Set(cardsData.map((card) => card.noun))];
