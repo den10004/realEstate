@@ -1,6 +1,13 @@
 import cardsData from "./cardArr";
 import { openModalFunc } from "./main";
 
+import "swiper/css";
+import "swiper/css/pagination";
+import "./../styles/swiper.css";
+
+import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
+
 const counties = [...new Set(cardsData.map((card) => card.category))];
 const noun = [...new Set(cardsData.map((card) => card.noun))];
 
@@ -310,6 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const swiper = new Swiper(swiperContainer, {
           slidesPerView: 1,
+          modules: [Pagination],
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
