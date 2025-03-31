@@ -96,7 +96,7 @@
 
 @media screen and (max-width: 500px) {
     .header>div>h1 {
-        font-size: 30px;
+        font-size: 28px;
         max-width: 350px;
         text-align: left;
         margin-left: 0;
