@@ -8,8 +8,8 @@ import "./../styles/swiper.css";
 import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
 
-const counties = [...new Set(cardsData.map((card) => card.category))];
-const noun = [...new Set(cardsData.map((card) => card.noun))];
+//const counties = [...new Set(cardsData.map((card) => card.category))];
+//const noun = [...new Set(cardsData.map((card) => card.noun))];
 
 const swipers = new Map();
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,20 +17,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-btn");
 
   //добавление активности кнопки "все"
-  document
-    .getElementById("filter-controls")
-    .firstElementChild.classList.add("active");
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const currentUtmSource = urlParams.get("utm_campaign_name");
 
   renderCards(cardsData);
-  // Обработчики для кнопок фильтрации
+  const activeBtn = document.getElementById("filter-controls");
+
   filterButtons.forEach((button) => {
+    if (currentUtmSource) {
+      const buttonCampaign = button.getAttribute("data-campaign_name");
+
+      if (buttonCampaign === currentUtmSource) {
+        button.classList.add("active");
+        const filterValue = button.dataset.filter;
+        const output = document.getElementById("cat");
+        /*
+        for (let i = 0; i < counties.length; i++) {
+          if (filterValue === counties[i]) {
+            output.textContent = noun[i];
+            break;
+          } else if (filterValue === "Все") {
+            output.textContent = "за рубежом";
+          }
+        }*/
+        filterCards(filterValue);
+      }
+    } else {
+      activeBtn.firstElementChild.classList.add("active");
+    }
     button.addEventListener("click", () => {
       filterButtons.forEach((btn) => btn.classList.remove("active"));
       button.classList.add("active");
       const filterValue = button.dataset.filter;
-
       const output = document.getElementById("cat");
-
+      /*
       for (let i = 0; i < counties.length; i++) {
         if (filterValue === counties[i]) {
           output.textContent = noun[i];
@@ -38,14 +59,14 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (filterValue === "Все") {
           output.textContent = "за рубежом";
         }
-      }
+      }*/
       filterCards(filterValue);
     });
   });
 
   // Функция фильтрации карточек
   function filterCards(filter) {
-    if (filter === "Все") {
+    if (filter === "все") {
       renderCards(cardsData);
     } else {
       const matchedCards = cardsData.filter((card) => card.category === filter);
@@ -330,12 +351,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 const filter = [...new Set(cardsData.map((card) => card.category))];
-filter.unshift("Все");
+filter.unshift("все");
 
+const valuesUTM = ["", "tailand", "turciya", "gruziya", "oae", "indoneziya"];
 const productsHTML = filter
   .map(
-    (product) =>
-      `<button class="filter-btn blue-btn" data-filter="${product}">${product}</button>`
+    (product, index) =>
+      `<button class="filter-btn blue-btn" data-campaign_name="${valuesUTM[index]}" data-filter="${product}">${product}</button>`
   )
   .join("");
 
