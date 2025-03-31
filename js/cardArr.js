@@ -247,14 +247,14 @@ const cardsData = [
     btntitle: "Куда вам отправить презентацию ЖК Ayana Luxury Villas?",
     btnsub: "Презентация ЖК Ayana Luxury Villas",
     images: [
+      "./images/Ayana Luxury Villas/7.webp",
+      "./images/Ayana Luxury Villas/8.webp",
       "./images/Ayana Luxury Villas/1.webp",
       "./images/Ayana Luxury Villas/2.webp",
       "./images/Ayana Luxury Villas/3.webp",
       "./images/Ayana Luxury Villas/4.webp",
       "./images/Ayana Luxury Villas/5.webp",
       "./images/Ayana Luxury Villas/6.webp",
-      "./images/Ayana Luxury Villas/7.webp",
-      "./images/Ayana Luxury Villas/8.webp",
       "./images/Ayana Luxury Villas/9.webp",
       "./images/Ayana Luxury Villas/10.webp",
     ],
@@ -426,7 +426,7 @@ const cardsData = [
     price: "14 628 000 ₽",
     about: "4 этажа, 31 апартаментов",
     plan: "1+1, 2+1, 3+1",
-    deadline: "Август 2025",
+    deadline: "Август 2025 г.",
     sea: "800 м",
     developer: "Oksa Insaat",
     description:
@@ -468,13 +468,13 @@ const cardsData = [
     btnsub: "Презентация отеля Angsana Oceanview Residences",
 
     images: [
+      "/images/Angsana/6.webp",
+      "/images/Angsana/7.webp",
       "/images/Angsana/1.webp",
       "/images/Angsana/2.webp",
       "/images/Angsana/3.webp",
       "/images/Angsana/4.webp",
       "/images/Angsana/5.webp",
-      "/images/Angsana/6.webp",
-      "/images/Angsana/7.webp",
       "/images/Angsana/8.webp",
       "/images/Angsana/9.webp",
     ],
@@ -537,9 +537,9 @@ const cardsData = [
     btnsub: "Презентация Wyndham Grand Residences Batumi Gonio. Aqua",
 
     images: [
-      "/images/Wyndham Grand Residences Batumi Gonio. Aqua/6.webp",
       "/images/Wyndham Grand Residences Batumi Gonio. Aqua/3.webp",
       "/images/Wyndham Grand Residences Batumi Gonio. Aqua/4.webp",
+      "/images/Wyndham Grand Residences Batumi Gonio. Aqua/6.webp",
       "/images/Wyndham Grand Residences Batumi Gonio. Aqua/1.webp",
       "/images/Wyndham Grand Residences Batumi Gonio. Aqua/2.webp",
       "/images/Wyndham Grand Residences Batumi Gonio. Aqua/5.webp",
@@ -956,7 +956,6 @@ const cardsData = [
 
     images: [
       "/images/Space Odyssey/9.webp",
-      "/images/Space Odyssey/6.webp",
       "/images/Space Odyssey/1.webp",
       "/images/Space Odyssey/2.webp",
       "/images/Space Odyssey/3.webp",
@@ -1020,6 +1019,7 @@ const cardsData = [
     btnsub: "Презентация вилл SkyLine",
 
     images: [
+      "/images/SkyLine/0.webp",
       "/images/SkyLine/1.webp",
       "/images/SkyLine/2.webp",
       "/images/SkyLine/3.webp",
@@ -1052,7 +1052,7 @@ const cardsData = [
 
     images: [
       "/images/Legend of Ubud/12.webp",
-      "/images/Legend of Ubud/9.webp",
+      "/images/Legend of Ubud/7.webp",
       "/images/Legend of Ubud/10.webp",
       "/images/Legend of Ubud/11.webp",
       "/images/Legend of Ubud/1.webp",
@@ -1061,7 +1061,6 @@ const cardsData = [
       "/images/Legend of Ubud/4.webp",
       "/images/Legend of Ubud/5.webp",
       "/images/Legend of Ubud/6.webp",
-      "/images/Legend of Ubud/7.webp",
       "/images/Legend of Ubud/8.webp",
     ],
   },
@@ -1211,7 +1210,7 @@ const cardsData = [
       "В непосредственной близости представлен полный спектр удобств, включая кафе, кофейни, бары, аптеки, магазины, супермаркеты, студии красоты, отели, стадион «Челе Арена», автомойки, АЗС, клинику Central Hospital, школу и детский сад. Инфраструктура отеля включает в себя 2 бассейна, 3 панорамных ресторана, кинотеатр, SPA- и фитнес-центры, аптека, банкоматы, коворкинг-центр, детская комната и кафе.",
     id: "block1",
     pay: "рассрочка, ипотека",
-    benefit: "2 510 4005 ₽",
+    benefit: "2 510 400 ₽",
     income: "625 926 ₽",
     btntitle: "Куда вам отправить презентацию Апарт-отеля Geuz Towers?",
     btnsub: "Презентация Апарт-отеля Geuz Towers",
@@ -1510,8 +1509,8 @@ const cardsData = [
     btnsub: "Презентация ЖК Novus Sky",
 
     images: [
-      "/images/Novus Sky/1.webp",
       "/images/Novus Sky/2.webp",
+      "/images/Novus Sky/1.webp",
       "/images/Novus Sky/3.webp",
       "/images/Novus Sky/4.webp",
       "/images/Novus Sky/5.webp",

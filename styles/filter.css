@@ -47,7 +47,6 @@
     margin-bottom: 30px;
     font-size: 30px;
     font-weight: 600;
-    border-bottom: 1px solid var(--color-text-gray);
 }
 
 
@@ -60,6 +59,12 @@
 @media screen and (max-width: 800px) {
     .filter-controls {
         margin-top: 30px;
+
+    }
+
+    .other-divider {
+        padding: 0px 0 20px 20px;
+        margin-bottom: 0px;
     }
 }
 
