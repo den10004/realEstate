@@ -96,8 +96,8 @@
 
 @media screen and (max-width: 500px) {
     .header>div>h1 {
-        font-size: 28px;
-        max-width: 350px;
+        font-size: 30px;
+        max-width: 100%;
         text-align: left;
         margin-left: 0;
     }
@@ -118,8 +118,6 @@
         margin-top: 7px;
     }
 
-
-
     .header>div>p {
         font-size: 18px;
         text-align: left;
@@ -128,5 +126,27 @@
     .header-footer-btn {
         padding: 12px 20px 12px 20px;
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .header>div>h1 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .header>div>h1 {
+        font-size: 26px;
+    }
+
+    .filter-btn {
+        padding: 8px 10px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .header>div>h1 {
+        font-size: 24px;
     }
 }
