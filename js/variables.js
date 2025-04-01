@@ -15,6 +15,16 @@ export const indonesiaUtm = "indoneziya";
 export const georgiaUtm = "gruziya";
 export const oaeUtm = "oae";
 
+export const valuesUTM = [
+  "",
+  `${tailandUmt}`,
+  `${tyrkeyUtm}`,
+  `${georgiaUtm}`,
+  `${oaeUtm}`,
+  `${indonesiaUtm}`,
+];
+``;
+
 export const year = new Date().getFullYear();
 export const tel = "8 (800) 101-51-49";
 export const tel2 = "tel:88001015149";

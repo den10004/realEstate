@@ -1,13 +1,7 @@
 import cardsData from "./cardArr";
 import { openModalFunc } from "./main";
 
-import {
-  tailandUmt,
-  tyrkeyUtm,
-  indonesiaUtm,
-  georgiaUtm,
-  oaeUtm,
-} from "./variables";
+import { valuesUTM } from "./variables";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -21,8 +15,10 @@ const noun = [...new Set(cardsData.map((card) => card.noun))];
 
 const currentUrl = new URL(window.location.href);
 const urlParams = new URLSearchParams(window.location.search);
-const currentUtmSource = urlParams.get("utm_campaign_name");
-const countryQuery = currentUrl.searchParams.get("country");
+//const currentUtmSource = urlParams.get("utm_campaign_name");
+
+const countryQueryAll = currentUrl.searchParams.get("country");
+const countryQuery = countryQueryAll.split("/")[0];
 
 const swipers = new Map();
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,9 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonCampaign = button.getAttribute("data-campaign_name");
     const filterValue = button.dataset.filter;
 
-    if (currentUtmSource || countryQuery) {
+    if (/*currentUtmSource || */ countryQuery) {
       if (
-        buttonCampaign === currentUtmSource ||
+        /*  buttonCampaign === currentUtmSource ||*/
         countryQuery === buttonCampaign
       ) {
         button.classList.add("active");
@@ -382,15 +378,6 @@ function updateQueryParam(paramName, paramValue) {
 
 const filter = [...new Set(cardsData.map((card) => card.category))];
 filter.unshift("Все");
-const valuesUTM = [
-  "",
-  `${tailandUmt}`,
-  `${tyrkeyUtm}`,
-  `${georgiaUtm}`,
-  `${oaeUtm}`,
-  `${indonesiaUtm}`,
-];
-``;
 
 const productsHTML = filter
   .map(
