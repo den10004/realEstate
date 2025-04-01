@@ -20,7 +20,6 @@ const urlParams = new URLSearchParams(window.location.search);
 const countryQueryAll = currentUrl.searchParams.get("country");
 
 let countryQuery = "";
-//console.log(countryQueryAll);
 if (countryQueryAll) {
   countryQuery = countryQueryAll.split("/")[0];
 } else {
@@ -32,8 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const cardsContainer = document.getElementById("cards-container");
   const filterButtons = document.querySelectorAll(".filter-btn");
   const output = document.getElementById("cat");
-
-  //добавление активности кнопки "все"
 
   renderCards(cardsData);
   const activeBtn = document.getElementById("filter-controls");
@@ -47,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         countryQuery === buttonCampaign
       ) {
         button.classList.add("active");
-
+        console.log(1);
         for (let i = 0; i < counties.length; i++) {
           if (filterValue === counties[i]) {
             output.textContent = noun[i];
@@ -58,7 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         filterCards(filterValue);
       }
-    } else {
+    } else if (countryQuery != buttonCampaign) {
+      console.log(countryQuery);
       activeBtn.firstElementChild.classList.add("active");
     }
 
