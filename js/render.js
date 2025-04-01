@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Функция фильтрации карточек
   function filterCards(filter) {
-    if (filter === "все") {
+    if (filter === "Все") {
       renderCards(cardsData);
     } else {
       const matchedCards = cardsData.filter((card) => card.category === filter);
@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 const filter = [...new Set(cardsData.map((card) => card.category))];
-filter.unshift("все");
+filter.unshift("Все");
 
 const valuesUTM = ["", "tailand", "turciya", "gruziya", "oae", "indoneziya"];
 const productsHTML = filter
