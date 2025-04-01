@@ -23,7 +23,6 @@ export const valuesUTM = [
   `${oaeUtm}`,
   `${indonesiaUtm}`,
 ];
-``;
 
 export const year = new Date().getFullYear();
 export const tel = "8 (800) 101-51-49";
