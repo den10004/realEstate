@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const activeBtn = document.getElementById("filter-controls");
 
   filterButtons.forEach((button) => {
+    const buttonCampaign = button.getAttribute("data-campaign_name");
     if (currentUtmSource) {
-      const buttonCampaign = button.getAttribute("data-campaign_name");
-
       if (buttonCampaign === currentUtmSource) {
         button.classList.add("active");
         const filterValue = button.dataset.filter;
+
         const output = document.getElementById("cat");
         /*
         for (let i = 0; i < counties.length; i++) {
@@ -50,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
       filterButtons.forEach((btn) => btn.classList.remove("active"));
       button.classList.add("active");
       const filterValue = button.dataset.filter;
+      const buttonCampaign = button.getAttribute("data-campaign_name");
+      updateQueryParam("county", buttonCampaign);
       const output = document.getElementById("cat");
       /*
       for (let i = 0; i < counties.length; i++) {
@@ -350,10 +352,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function updateQueryParam(paramName, paramValue) {
+  const url = new URL(window.location.href);
+  url.searchParams.set(paramName, paramValue);
+  window.history.replaceState({}, "", url);
+}
+
 const filter = [...new Set(cardsData.map((card) => card.category))];
 filter.unshift("Все");
-
 const valuesUTM = ["", "tailand", "turciya", "gruziya", "oae", "indoneziya"];
+
 const productsHTML = filter
   .map(
     (product, index) =>
