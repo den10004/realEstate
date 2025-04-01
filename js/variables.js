@@ -9,6 +9,12 @@ export const tyrkeynoun = "Турции";
 export const indonesianoun = "Индонезии";
 export const georgianoun = "Грузии";
 
+export const tailandUmt = "tailand";
+export const tyrkeyUtm = "turciya";
+export const indonesiaUtm = "indoneziya";
+export const georgiaUtm = "gruziya";
+export const oaeUtm = "oae";
+
 export const year = new Date().getFullYear();
 export const tel = "8 (800) 101-51-49";
 export const tel2 = "tel:88001015149";
