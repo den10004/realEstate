@@ -18,7 +18,14 @@ const urlParams = new URLSearchParams(window.location.search);
 //const currentUtmSource = urlParams.get("utm_campaign_name");
 
 const countryQueryAll = currentUrl.searchParams.get("country");
-const countryQuery = countryQueryAll.split("/")[0];
+
+let countryQuery = "";
+//console.log(countryQueryAll);
+if (countryQueryAll) {
+  countryQuery = countryQueryAll.split("/")[0];
+} else {
+  countryQuery = "";
+}
 
 const swipers = new Map();
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
   filterButtons.forEach((button) => {
     const buttonCampaign = button.getAttribute("data-campaign_name");
     const filterValue = button.dataset.filter;
-
     if (/*currentUtmSource || */ countryQuery) {
       if (
         /*  buttonCampaign === currentUtmSource ||*/
