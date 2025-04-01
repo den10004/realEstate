@@ -18,7 +18,6 @@ const urlParams = new URLSearchParams(window.location.search);
 //const currentUtmSource = urlParams.get("utm_campaign_name");
 
 const countryQueryAll = currentUrl.searchParams.get("country");
-
 let countryQuery = "";
 if (countryQueryAll) {
   countryQuery = countryQueryAll.split("/")[0];
@@ -35,16 +34,20 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCards(cardsData);
   const activeBtn = document.getElementById("filter-controls");
 
+  if (!valuesUTM.slice(1).includes(countryQuery)) {
+    activeBtn.firstElementChild.classList.add("active");
+  }
+
   filterButtons.forEach((button) => {
     const buttonCampaign = button.getAttribute("data-campaign_name");
     const filterValue = button.dataset.filter;
+
     if (/*currentUtmSource || */ countryQuery) {
       if (
         /*  buttonCampaign === currentUtmSource ||*/
         countryQuery === buttonCampaign
       ) {
         button.classList.add("active");
-        console.log(1);
         for (let i = 0; i < counties.length; i++) {
           if (filterValue === counties[i]) {
             output.textContent = noun[i];
@@ -55,8 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         filterCards(filterValue);
       }
-    } else if (countryQuery != buttonCampaign) {
-      console.log(countryQuery);
+    } else {
       activeBtn.firstElementChild.classList.add("active");
     }
 
