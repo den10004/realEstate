@@ -10,6 +10,8 @@ import "./../styles/swiper.css";
 import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
 
+const formatter = new Intl.NumberFormat("ru-RU");
+
 const counties = [...new Set(cardsData.map((card) => card.category))];
 const noun = [...new Set(cardsData.map((card) => card.noun))];
 
@@ -295,17 +297,15 @@ document.addEventListener("DOMContentLoaded", () => {
         cardBottom.appendChild(divdiv4);
 
         const div1div4 = document.createElement("div");
-        div1div4.innerHTML += `Выгода от перепродажи: <br /><span>от ${card.benefit.replace(
-          /\d(?=(\d{3})+\D)/g,
-          "$& "
-        )}</span>`;
+        div1div4.innerHTML += `Выгода от перепродажи: <br /><span>от ${formatter.format(
+          card.benefit
+        )} ₽</span>`;
         cardBottom.appendChild(div1div4);
 
         const div2div4 = document.createElement("div");
-        div2div4.innerHTML += `Доходность от аренды в год: <br /><span>от ${card.income.replace(
-          /\d(?=(\d{3})+\D)/g,
-          "$& "
-        )}</span>`;
+        div2div4.innerHTML += `Доходность от аренды в год: <br /><span>от ${formatter.format(
+          card.income
+        )} ₽</span>`;
         cardBottom.appendChild(div2div4);
 
         const trigger = document.createElement("div");
