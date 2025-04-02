@@ -295,11 +295,17 @@ document.addEventListener("DOMContentLoaded", () => {
         cardBottom.appendChild(divdiv4);
 
         const div1div4 = document.createElement("div");
-        div1div4.innerHTML += `Выгода от перепродажи: <br /><span>от ${card.benefit}</span>`;
+        div1div4.innerHTML += `Выгода от перепродажи: <br /><span>от ${card.benefit.replace(
+          /\d(?=(\d{3})+\D)/g,
+          "$& "
+        )}</span>`;
         cardBottom.appendChild(div1div4);
 
         const div2div4 = document.createElement("div");
-        div2div4.innerHTML += `Доходность от аренды в год: <br /><span>от ${card.income}</span>`;
+        div2div4.innerHTML += `Доходность от аренды в год: <br /><span>от ${card.income.replace(
+          /\d(?=(\d{3})+\D)/g,
+          "$& "
+        )}</span>`;
         cardBottom.appendChild(div2div4);
 
         const trigger = document.createElement("div");
